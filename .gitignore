@@ -1,0 +1,12 @@
+# Project: Xihe Kosmos
+node_modules/
+.DS_Store
+Thumbs.db
+*.log
+*.err
+server.bat
+*.pyc
+__pycache__/
+.venv/
+dist/
+.sandbox/

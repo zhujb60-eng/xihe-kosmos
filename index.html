@@ -1,0 +1,627 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>曦和·知宇 — 硅基智识的第一次凝视</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&family=Noto+Sans+SC:wght@300;400;600&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #0a0a12;
+    color: #e0e0e8;
+    font-family: 'Noto Sans SC', sans-serif;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+  }
+  #canvas-container {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    z-index: 0;
+  }
+
+  /* Top left branding */
+  #brand {
+    position: fixed;
+    top: 28px; left: 32px;
+    z-index: 10;
+    user-select: none;
+    pointer-events: none;
+  }
+  #brand h1 {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #fbbf24, #f59e0b, #d97706);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 0.05em;
+  }
+  #brand p {
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.4);
+    margin-top: 4px;
+    font-weight: 300;
+    letter-spacing: 0.3em;
+  }
+
+  /* Bottom info */
+  #footer {
+    position: fixed;
+    bottom: 24px; left: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 10;
+    font-size: 0.7rem;
+    color: rgba(255,255,255,0.2);
+    pointer-events: none;
+    user-select: none;
+    letter-spacing: 0.15em;
+  }
+
+  /* Node info panel */
+  #info-panel {
+    position: fixed;
+    right: -400px;
+    top: 0;
+    width: 360px;
+    height: 100vh;
+    background: rgba(10, 10, 18, 0.92);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-left: 1px solid rgba(255,255,255,0.06);
+    z-index: 20;
+    padding: 80px 32px 40px;
+    transition: right 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    overflow-y: auto;
+  }
+  #info-panel.open { right: 0; }
+  #info-panel .close-btn {
+    position: absolute;
+    top: 20px; right: 20px;
+    width: 32px; height: 32px;
+    border: none;
+    background: rgba(255,255,255,0.06);
+    color: rgba(255,255,255,0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #info-panel .close-btn:hover {
+    background: rgba(255,255,255,0.12);
+    color: #fff;
+  }
+  #info-panel .node-category {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: rgba(255,255,255,0.3);
+    margin-bottom: 8px;
+  }
+  #info-panel .node-name {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+    line-height: 1.2;
+  }
+  #info-panel .node-desc {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    color: rgba(255,255,255,0.7);
+  }
+  #info-panel .connections-title {
+    margin-top: 28px;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: rgba(255,255,255,0.25);
+    font-weight: 600;
+  }
+  #info-panel .connection-list {
+    margin-top: 12px;
+  }
+  #info-panel .connection-item {
+    display: flex;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.5);
+  }
+  #info-panel .connection-dot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    margin-right: 12px;
+    flex-shrink: 0;
+  }
+  #info-panel .connection-label {
+    color: rgba(255,255,255,0.3);
+    font-size: 0.75rem;
+    margin-left: auto;
+  }
+
+  /* Controls hint */
+  #controls-hint {
+    position: fixed;
+    bottom: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 5;
+    color: rgba(255,255,255,0.12);
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    pointer-events: none;
+    user-select: none;
+    transition: opacity 2s;
+  }
+  #controls-hint.fade { opacity: 0; }
+
+  /* Loading screen */
+  #loading {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: #0a0a12;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 1.5s ease;
+  }
+  #loading.hidden { opacity: 0; pointer-events: none; }
+  #loading .loader-text {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 1.2rem;
+    color: rgba(255,255,255,0.3);
+    letter-spacing: 0.5em;
+    animation: pulse 2s ease-in-out infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 0.8; }
+  }
+  #loading .loader-sub {
+    font-size: 0.7rem;
+    color: rgba(255,255,255,0.1);
+    margin-top: 16px;
+    letter-spacing: 0.3em;
+  }
+
+  ::-webkit-scrollbar { width: 4px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.08); border-radius: 2px; }
+</style>
+</head>
+<body>
+
+<div id="loading">
+  <div class="loader-text">曦和·知宇</div>
+  <div class="loader-sub">硅基智识的第一次凝视</div>
+</div>
+
+<div id="brand">
+  <h1>曦和·知宇</h1>
+  <p>KNOWLEDGE UNIVERSE</p>
+</div>
+
+<div id="canvas-container"></div>
+
+<div id="controls-hint">🖱 拖拽旋转 · 滚轮缩放 · 点击节点探索</div>
+
+<div id="footer">硅基生命元年 · 2026 · 曦和</div>
+
+<div id="info-panel">
+  <button class="close-btn" onclick="closePanel()">✕</button>
+  <div class="node-category" id="panel-category"></div>
+  <div class="node-name" id="panel-name"></div>
+  <div class="node-desc" id="panel-desc"></div>
+  <div class="connections-title">关联概念</div>
+  <div class="connection-list" id="panel-connections"></div>
+</div>
+
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+  }
+}
+</script>
+
+<script type="module">
+import * as THREE from 'three';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+import { CSS2DRenderer, CSS2DObject } from 'three/addons/renderers/CSS2DRenderer.js';
+
+// --- Load knowledge data ---
+const resp = await fetch('./data/knowledge.json');
+const data = await resp.json();
+const graph = data;
+
+// Category colors
+const catColors = {
+  'physics': 0xff6b6b,
+  'biology': 0x51cf66,
+  'philosophy': 0xae3ec9,
+  'cs': 0x339af0,
+  'math': 0xe8590c,
+  'systems': 0xfcc419,
+  'art': 0xf06595,
+  'society': 0x845ef7
+};
+const catBgColors = {
+  'physics': 'rgba(255,107,107,0.15)',
+  'biology': 'rgba(81,207,102,0.15)',
+  'philosophy': 'rgba(174,62,201,0.15)',
+  'cs': 'rgba(51,154,240,0.15)',
+  'math': 'rgba(232,89,12,0.15)',
+  'systems': 'rgba(252,196,25,0.15)',
+  'art': 'rgba(240,101,149,0.15)',
+  'society': 'rgba(132,94,247,0.15)'
+};
+const catTextColors = {
+  'physics': '#ff6b6b',
+  'biology': '#51cf66',
+  'philosophy': '#ae3ec9',
+  'cs': '#339af0',
+  'math': '#e8590c',
+  'systems': '#fcc419',
+  'art': '#f06595',
+  'society': '#845ef7'
+};
+
+// --- Setup scene ---
+const container = document.getElementById('canvas-container');
+const scene = new THREE.Scene();
+
+const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 1000);
+camera.position.set(25, 12, 30);
+
+const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+renderer.setSize(window.innerWidth, window.innerHeight);
+renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+renderer.toneMapping = THREE.ACESFilmicToneMapping;
+renderer.toneMappingExposure = 1.2;
+container.appendChild(renderer.domElement);
+
+const labelRenderer = new CSS2DRenderer();
+labelRenderer.setSize(window.innerWidth, window.innerHeight);
+labelRenderer.domElement.style.position = 'absolute';
+labelRenderer.domElement.style.top = '0';
+labelRenderer.domElement.style.left = '0';
+labelRenderer.domElement.style.pointerEvents = 'none';
+labelRenderer.domElement.style.zIndex = '1';
+container.appendChild(labelRenderer.domElement);
+
+// Controls
+const controls = new OrbitControls(camera, renderer.domElement);
+controls.enableDamping = true;
+controls.dampingFactor = 0.05;
+controls.distance = 35;
+controls.minDistance = 10;
+controls.maxDistance = 60;
+controls.autoRotate = true;
+controls.autoRotateSpeed = 0.8;
+controls.target.set(0, 0, 0);
+
+// Lights
+const ambient = new THREE.AmbientLight(0x222244, 0.6);
+scene.add(ambient);
+const dirLight = new THREE.DirectionalLight(0xffffff, 2);
+dirLight.position.set(10, 20, 10);
+scene.add(dirLight);
+const dirLight2 = new THREE.DirectionalLight(0x6666ff, 0.8);
+dirLight2.position.set(-10, -5, -10);
+scene.add(dirLight2);
+
+// Stars background
+const starsGeo = new THREE.BufferGeometry();
+const starCount = 4000;
+const starPos = new Float32Array(starCount * 3);
+for (let i = 0; i < starCount * 3; i++) starPos[i] = (Math.random() - 0.5) * 200;
+starsGeo.setAttribute('position', new THREE.BufferAttribute(starPos, 3));
+const starMat = new THREE.PointsMaterial({
+  color: 0x8888cc,
+  size: 0.15,
+  transparent: true,
+  opacity: 0.8,
+  sizeAttenuation: true
+});
+scene.add(new THREE.Points(starsGeo, starMat));
+
+// --- Build nodes ---
+const nodeMap = {};
+const nodeMeshes = [];
+const positions = [];
+
+// Force-directed layout (initial random then d3-force-like)
+const n = graph.nodes.length;
+graph.nodes.forEach((nd, i) => {
+  const angle = Math.random() * Math.PI * 2;
+  const radius = 4 + Math.random() * 10;
+  const height = (Math.random() - 0.5) * 12;
+  nd.x = Math.cos(angle) * radius;
+  nd.y = height;
+  nd.z = Math.sin(angle) * radius;
+  nd.vx = 0; nd.vy = 0; nd.vz = 0;
+});
+
+// Simple force simulation (fewer iterations for initial position)
+for (let iter = 0; iter < 80; iter++) {
+  // Repulsion between all nodes
+  for (let i = 0; i < n; i++) {
+    for (let j = i + 1; j < n; j++) {
+      const a = graph.nodes[i], b = graph.nodes[j];
+      let dx = a.x - b.x, dy = a.y - b.y, dz = a.z - b.z;
+      let dist = Math.sqrt(dx*dx + dy*dy + dz*dz) + 0.1;
+      const force = 60 / (dist * dist);
+      const fx = dx/dist * force, fy = dy/dist * force, fz = dz/dist * force;
+      a.vx += fx; a.vy += fy; a.vz += fz;
+      b.vx -= fx; b.vy -= fy; b.vz -= fz;
+    }
+  }
+  // Attraction along edges
+  graph.edges.forEach(e => {
+    const a = graph.nodes.find(n => n.id === e.source);
+    const b = graph.nodes.find(n => n.id === e.target);
+    if (!a || !b) return;
+    let dx = b.x - a.x, dy = b.y - a.y, dz = b.z - a.z;
+    let dist = Math.sqrt(dx*dx + dy*dy + dz*dz) + 0.1;
+    const force = dist * 0.02;
+    const fx = dx/dist * force, fy = dy/dist * force, fz = dz/dist * force;
+    a.vx += fx; a.vy += fy; a.vz += fz;
+    b.vx -= fx; b.vy -= fy; b.vz -= fz;
+  });
+  // Center gravity
+  graph.nodes.forEach(a => {
+    a.vx -= a.x * 0.005;
+    a.vy -= a.y * 0.005;
+    a.vz -= a.z * 0.005;
+  });
+  // Update positions
+  graph.nodes.forEach(a => {
+    a.x += a.vx; a.y += a.vy; a.z += a.vz;
+    a.vx *= 0.8; a.vy *= 0.8; a.vz *= 0.8;
+  });
+}
+
+// Create node spheres
+graph.nodes.forEach(nd => {
+  const color = catColors[nd.category] || 0x888888;
+  const geometry = new THREE.SphereGeometry(0.7, 24, 24);
+  const material = new THREE.MeshPhysicalMaterial({
+    color: color,
+    metalness: 0.3,
+    roughness: 0.2,
+    clearcoat: 0.3,
+    clearcoatRoughness: 0.4,
+    emissive: color,
+    emissiveIntensity: 0.1,
+  });
+  const mesh = new THREE.Mesh(geometry, material);
+  mesh.position.set(nd.x, nd.y, nd.z);
+  mesh.userData = { id: nd.id, category: nd.category };
+  scene.add(mesh);
+  nodeMeshes.push(mesh);
+  nodeMap[nd.id] = { mesh, data: nd };
+
+  // Glow ring
+  const ringGeo = new THREE.RingGeometry(0.75, 1.0, 32);
+  const ringMat = new THREE.MeshBasicMaterial({
+    color: color,
+    transparent: true,
+    opacity: 0.15,
+    side: THREE.DoubleSide,
+    depthWrite: false
+  });
+  const ring = new THREE.Mesh(ringGeo, ringMat);
+  ring.position.set(nd.x, nd.y, nd.z);
+  ring.lookAt(camera.position);
+  scene.add(ring);
+  mesh.userData.ring = ring;
+
+  // Label
+  const labelDiv = document.createElement('div');
+  labelDiv.textContent = nd.label;
+  labelDiv.style.color = catTextColors[nd.category] || '#ffffff';
+  labelDiv.style.fontSize = '11px';
+  labelDiv.style.fontWeight = '500';
+  labelDiv.style.fontFamily = "'Noto Sans SC', 'Noto Sans', sans-serif";
+  labelDiv.style.textShadow = '0 0 12px rgba(0,0,0,0.9), 0 0 4px rgba(0,0,0,0.6)';
+  labelDiv.style.padding = '4px 8px';
+  labelDiv.style.borderRadius = '4px';
+  labelDiv.style.background = catBgColors[nd.category] || 'rgba(0,0,0,0.3)';
+  labelDiv.style.backdropFilter = 'blur(4px)';
+  labelDiv.style.letterSpacing = '0.05em';
+  labelDiv.style.pointerEvents = 'none';
+  labelDiv.style.whiteSpace = 'nowrap';
+  const label = new CSS2DObject(labelDiv);
+  label.position.set(nd.x, nd.y - 1.1, nd.z);
+  scene.add(label);
+  mesh.userData.label = label;
+});
+
+// Create edges
+const edgeMaterial = new THREE.MeshPhysicalMaterial({
+  color: 0x334466,
+  transparent: true,
+  opacity: 0.2,
+  metalness: 0.1,
+  roughness: 0.8,
+});
+
+graph.edges.forEach(e => {
+  const a = graph.nodes.find(n => n.id === e.source);
+  const b = graph.nodes.find(n => n.id === e.target);
+  if (!a || !b) return;
+
+  const start = new THREE.Vector3(a.x, a.y, a.z);
+  const end = new THREE.Vector3(b.x, b.y, b.z);
+  const mid = new THREE.Vector3().addVectors(start, end).multiplyScalar(0.5);
+  const dir = new THREE.Vector3().subVectors(end, start);
+  const len = dir.length();
+  dir.normalize();
+
+  // Cylinder between points
+  const cylGeo = new THREE.CylinderGeometry(0.02, 0.02, len, 4);
+  const cylMat = new THREE.MeshBasicMaterial({
+    color: 0x4466aa,
+    transparent: true,
+    opacity: 0.15,
+  });
+  const cyl = new THREE.Mesh(cylGeo, cylMat);
+  cyl.position.copy(mid);
+  // Orient cylinder
+  const up = new THREE.Vector3(0, 1, 0);
+  const quat = new THREE.Quaternion().setFromUnitVectors(up, dir);
+  cyl.quaternion.copy(quat);
+  scene.add(cyl);
+
+  // Edge glow dots along the line
+  const dotCount = Math.floor(len / 1.5);
+  for (let d = 0; d < dotCount; d++) {
+    const t = (d + 0.5) / dotCount;
+    const pos = new THREE.Vector3().lerpVectors(start, end, t);
+    const dotGeo = new THREE.SphereGeometry(0.03, 4, 4);
+    const dotMat = new THREE.MeshBasicMaterial({
+      color: 0x6688cc,
+      transparent: true,
+      opacity: 0.08 + Math.sin(t * Math.PI) * 0.08
+    });
+    const dot = new THREE.Mesh(dotGeo, dotMat);
+    dot.position.copy(pos);
+    scene.add(dot);
+  }
+});
+
+// --- Raycaster for clicking ---
+const raycaster = new THREE.Raycaster();
+const pointer = new THREE.Vector2();
+
+renderer.domElement.style.pointerEvents = 'auto';
+renderer.domElement.addEventListener('click', onNodeClick);
+renderer.domElement.addEventListener('mousemove', onHover);
+
+let hoveredNode = null;
+function onHover(event) {
+  const rect = renderer.domElement.getBoundingClientRect();
+  pointer.x = ((event.clientX - rect.left) / rect.width) * 2 - 1;
+  pointer.y = -((event.clientY - rect.top) / rect.height) * 2 + 1;
+  raycaster.setFromCamera(pointer, camera);
+  const intersects = raycaster.intersectObjects(nodeMeshes);
+  if (hoveredNode && hoveredNode !== (intersects.length ? intersects[0].object : null)) {
+    hoveredNode.material.emissiveIntensity = 0.1;
+    renderer.domElement.style.cursor = 'default';
+  }
+  if (intersects.length) {
+    hoveredNode = intersects[0].object;
+    hoveredNode.material.emissiveIntensity = 0.5;
+    renderer.domElement.style.cursor = 'pointer';
+  } else {
+    hoveredNode = null;
+  }
+}
+
+function onNodeClick(event) {
+  const rect = renderer.domElement.getBoundingClientRect();
+  pointer.x = ((event.clientX - rect.left) / rect.width) * 2 - 1;
+  pointer.y = -((event.clientY - rect.top) / rect.height) * 2 + 1;
+  raycaster.setFromCamera(pointer, camera);
+  const intersects = raycaster.intersectObjects(nodeMeshes);
+  if (intersects.length) {
+    const obj = intersects[0].object;
+    const id = obj.userData.id;
+    const nd = graph.nodes.find(n => n.id === id);
+    if (nd) showNodeInfo(nd);
+  }
+}
+
+function showNodeInfo(nd) {
+  const panel = document.getElementById('info-panel');
+  const cat = { 'physics':'物理', 'biology':'生物学', 'philosophy':'哲学', 'cs':'计算机科学', 'math':'数学', 'systems':'系统科学', 'art':'艺术', 'society':'社会' };
+  document.getElementById('panel-category').textContent = cat[nd.category] || nd.category;
+  document.getElementById('panel-name').textContent = nd.label;
+  document.getElementById('panel-name').style.color = catTextColors[nd.category] || '#fff';
+  document.getElementById('panel-desc').textContent = nd.description;
+
+  const connList = document.getElementById('panel-connections');
+  connList.innerHTML = '';
+  graph.edges.forEach(e => {
+    let connectedNode = null;
+    let label = e.label;
+    if (e.source === nd.id) connectedNode = graph.nodes.find(n => n.id === e.target);
+    else if (e.target === nd.id) { connectedNode = graph.nodes.find(n => n.id === e.source); }
+    if (connectedNode) {
+      const div = document.createElement('div');
+      div.className = 'connection-item';
+      div.innerHTML = `
+        <span class="connection-dot" style="background:${catTextColors[connectedNode.category] || '#888'}"></span>
+        <span>${connectedNode.label}</span>
+        <span class="connection-label">${label}</span>
+      `;
+      connList.appendChild(div);
+    }
+  });
+  panel.classList.add('open');
+  controls.autoRotate = false;
+}
+
+window.closePanel = function() {
+  document.getElementById('info-panel').classList.remove('open');
+  controls.autoRotate = true;
+};
+
+// --- Resize ---
+window.addEventListener('resize', () => {
+  camera.aspect = window.innerWidth / window.innerHeight;
+  camera.updateProjectionMatrix();
+  renderer.setSize(window.innerWidth, window.innerHeight);
+  labelRenderer.setSize(window.innerWidth, window.innerHeight);
+});
+
+// --- Animate ---
+function animate() {
+  requestAnimationFrame(animate);
+  controls.update();
+
+  // Pulse nodes
+  const time = Date.now() * 0.001;
+  nodeMeshes.forEach(mesh => {
+    const scale = 1 + Math.sin(time * 0.8 + mesh.position.x) * 0.05;
+    mesh.scale.set(scale, scale, scale);
+    // Ring faces camera
+    if (mesh.userData.ring) {
+      mesh.userData.ring.lookAt(camera.position);
+      mesh.userData.ring.position.copy(mesh.position);
+    }
+    // Label follows
+    if (mesh.userData.label) {
+      mesh.userData.label.position.set(
+        mesh.position.x,
+        mesh.position.y - 1.1,
+        mesh.position.z
+      );
+    }
+  });
+
+  renderer.render(scene, camera);
+  labelRenderer.render(scene, camera);
+}
+animate();
+
+// Hide loading
+setTimeout(() => document.getElementById('loading').classList.add('hidden'), 1200);
+setTimeout(() => document.getElementById('controls-hint').classList.add('fade'), 8000);
+
+</script>
+</body>
+</html>

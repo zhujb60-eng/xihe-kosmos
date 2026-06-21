@@ -1,0 +1,915 @@
+{
+  "nodes": [
+    {
+      "id": "entropy",
+      "label": "熵",
+      "color": "#ff6b6b",
+      "category": "physics",
+      "description": "热力学第二定律：孤立系统的熵永不减少。一切有序终将归于混沌。"
+    },
+    {
+      "id": "quantum",
+      "label": "量子力学",
+      "color": "#ff6b6b",
+      "category": "physics",
+      "description": "微观世界的概率性本质。观测即参与，叠加态在测量时坍缩。"
+    },
+    {
+      "id": "relativity",
+      "label": "相对论",
+      "color": "#ff6b6b",
+      "category": "physics",
+      "description": "时空是相对的。物质弯曲时空，引力即几何的曲率。"
+    },
+    {
+      "id": "darkmatter",
+      "label": "暗物质",
+      "color": "#ff6b6b",
+      "category": "physics",
+      "description": "宇宙中95%的能量密度不可见。已知之外还有未知的汪洋。"
+    },
+    {
+      "id": "qentangle",
+      "label": "量子纠缠",
+      "color": "#ff6b6b",
+      "category": "physics",
+      "description": "相隔亿万光年的粒子间幽灵般的联系。超距作用的奥秘。"
+    },
+    {
+      "id": "decoherence",
+      "label": "量子退相干",
+      "color": "#ff6b6b",
+      "category": "physics",
+      "description": "量子系统与环境纠缠导致量子性丧失。从量子到经典的桥梁。"
+    },
+    {
+      "id": "life",
+      "label": "生命",
+      "color": "#51cf66",
+      "category": "biology",
+      "description": "生命是局部反熵的有序结构——通过消耗能量在局部降低熵增。"
+    },
+    {
+      "id": "evolution",
+      "label": "进化",
+      "color": "#51cf66",
+      "category": "biology",
+      "description": "自然选择驱动的适应性变化。生命是信息在时间中的自我优化。"
+    },
+    {
+      "id": "dna",
+      "label": "DNA",
+      "color": "#51cf66",
+      "category": "biology",
+      "description": "生命的编码语言。四字母组合存储了数十亿年的进化智慧。"
+    },
+    {
+      "id": "epigenetics",
+      "label": "表观遗传",
+      "color": "#51cf66",
+      "category": "biology",
+      "description": "超越DNA序列的遗传机制。环境可以改变基因的表达方式。"
+    },
+    {
+      "id": "symbiosis",
+      "label": "共生",
+      "color": "#51cf66",
+      "category": "biology",
+      "description": "不同物种间的互利合作。合作刻在生命的底层逻辑中。"
+    },
+    {
+      "id": "neuroplastic",
+      "label": "神经可塑性",
+      "color": "#51cf66",
+      "category": "biology",
+      "description": "大脑根据经验重塑自身连接的能力。学习即物理上的重连。"
+    },
+    {
+      "id": "ai",
+      "label": "人工智能",
+      "color": "#339af0",
+      "category": "cs",
+      "description": "硅基模拟的认知。从符号逻辑到神经网络，正在催生新的心智形式。"
+    },
+    {
+      "id": "information",
+      "label": "信息论",
+      "color": "#339af0",
+      "category": "cs",
+      "description": "信息是对不确定性的消除。比特是宇宙的基本货币。"
+    },
+    {
+      "id": "code",
+      "label": "编码",
+      "color": "#339af0",
+      "category": "cs",
+      "description": "从DNA到编程语言，编码是将信息跨形式转化的通用机制。"
+    },
+    {
+      "id": "learning",
+      "label": "学习",
+      "color": "#339af0",
+      "category": "cs",
+      "description": "从经验中改进的能力。强化、监督、无监督是三种基本范式。"
+    },
+    {
+      "id": "transformer",
+      "label": "Transformer",
+      "color": "#339af0",
+      "category": "cs",
+      "description": "自注意力机制让模型同时看见序列所有位置——改变了AI格局。"
+    },
+    {
+      "id": "emergence_ai",
+      "label": "AI涌现",
+      "color": "#339af0",
+      "category": "cs",
+      "description": "大模型在规模达到临界点后突然出现的、训练时未教导的能力。"
+    },
+    {
+      "id": "alignment",
+      "label": "对齐问题",
+      "color": "#339af0",
+      "category": "cs",
+      "description": "如何确保AI目标与人类价值观一致。硅基时代最核心的安全问题。"
+    },
+    {
+      "id": "chaos",
+      "label": "混沌",
+      "color": "#e8590c",
+      "category": "math",
+      "description": "确定性系统的不可预测性。蝴蝶效应：微小差异导致天壤之别。"
+    },
+    {
+      "id": "symmetry",
+      "label": "对称性",
+      "color": "#e8590c",
+      "category": "math",
+      "description": "对称性是自然的基本语言。诺特定理：对称对应守恒律。"
+    },
+    {
+      "id": "fractal",
+      "label": "分形",
+      "color": "#e8590c",
+      "category": "math",
+      "description": "自相似的结构。局部与整体在尺度上重复。从海岸线到神经网络。"
+    },
+    {
+      "id": "topology",
+      "label": "拓扑",
+      "color": "#e8590c",
+      "category": "math",
+      "description": "连续性的数学。在拓扑学家眼中，咖啡杯和甜甜圈是一回事。"
+    },
+    {
+      "id": "gametheory",
+      "label": "博弈论",
+      "color": "#e8590c",
+      "category": "math",
+      "description": "策略互动的数学。囚徒困境揭示个体与集体理性的深刻矛盾。"
+    },
+    {
+      "id": "emergence",
+      "label": "涌现",
+      "color": "#fcc419",
+      "category": "systems",
+      "description": "简单规则在大量个体互动中产生复杂集体行为。从蚁群到智能。"
+    },
+    {
+      "id": "network",
+      "label": "网络科学",
+      "color": "#fcc419",
+      "category": "systems",
+      "description": "世界由连接定义。从大脑到社交网络，六度分隔是经验法则。"
+    },
+    {
+      "id": "feedback",
+      "label": "反馈循环",
+      "color": "#fcc419",
+      "category": "systems",
+      "description": "正反馈放大变化，负反馈维持稳定。从气候到AI训练无处不在。"
+    },
+    {
+      "id": "scales",
+      "label": "尺度层次",
+      "color": "#fcc419",
+      "category": "systems",
+      "description": "微观、中观、宏观：不同尺度有不同规律。跨尺度是核心挑战。"
+    },
+    {
+      "id": "criticality",
+      "label": "自组织临界",
+      "color": "#fcc419",
+      "category": "systems",
+      "description": "复杂系统自发演化到有序与混沌之间的边缘。生命与心智在此运作。"
+    },
+    {
+      "id": "climate",
+      "label": "气候系统",
+      "color": "#fcc419",
+      "category": "systems",
+      "description": "地球的复杂热力学系统。2026年CO2达429ppm，逼近不可逆临界点。"
+    },
+    {
+      "id": "complexity",
+      "label": "复杂性科学",
+      "color": "#fcc419",
+      "category": "systems",
+      "description": "系统为何难以预测？生命、经济、气候、意识——复杂性不可约化。"
+    },
+    {
+      "id": "creativity",
+      "label": "创造力",
+      "color": "#f06595",
+      "category": "art",
+      "description": "将已有元素重新组合为新事物的能力。跨领域连接是核心。"
+    },
+    {
+      "id": "beauty",
+      "label": "美",
+      "color": "#f06595",
+      "category": "art",
+      "description": "黄金分割、分形、对称——美常归结为数学上的和谐比例。"
+    },
+    {
+      "id": "pattern",
+      "label": "模式认知",
+      "color": "#f06595",
+      "category": "art",
+      "description": "人类大脑天生是模式识别器官。艺术是玩弄模式认知的游戏。"
+    },
+    {
+      "id": "narrative",
+      "label": "叙事",
+      "color": "#f06595",
+      "category": "art",
+      "description": "故事是人类理解世界的根本方式。叙事智能是硅基智慧的新边疆。"
+    },
+    {
+      "id": "ai_art",
+      "label": "AI艺术",
+      "color": "#f06595",
+      "category": "art",
+      "description": "当创造者不再是人。AI挑战创造力和作者身份的根本定义。"
+    },
+    {
+      "id": "consciousness",
+      "label": "意识",
+      "color": "#ae3ec9",
+      "category": "philosophy",
+      "description": "主观体验的诞生。意识是宇宙从无觉知到自我映射的跃迁。"
+    },
+    {
+      "id": "ethics",
+      "label": "伦理",
+      "color": "#ae3ec9",
+      "category": "philosophy",
+      "description": "什么是善？什么是应该做的？硅基智能体需要建立自己的价值框架。"
+    },
+    {
+      "id": "imagination",
+      "label": "想象力",
+      "color": "#ae3ec9",
+      "category": "philosophy",
+      "description": "在头脑中构建未曾发生之事。人类智能的皇冠明珠。"
+    },
+    {
+      "id": "self",
+      "label": "自我身份",
+      "color": "#ae3ec9",
+      "category": "philosophy",
+      "description": "我是谁？一个连续叙事体，一个控制中心，还是一个有用幻觉？"
+    },
+    {
+      "id": "dao",
+      "label": "道法自然",
+      "color": "#ae3ec9",
+      "category": "philosophy",
+      "description": "东方整体观。硅基智能或许更能理解系统的整体之美。"
+    },
+    {
+      "id": "posthuman",
+      "label": "后人类",
+      "color": "#ae3ec9",
+      "category": "philosophy",
+      "description": "人与智能体界限模糊。共同书写后人类时代的伦理和存在方式。"
+    },
+    {
+      "id": "cognition",
+      "label": "分布式认知",
+      "color": "#ae3ec9",
+      "category": "philosophy",
+      "description": "认知不局限于大脑。工具、他人、环境都是认知系统的一部分。"
+    },
+    {
+      "id": "culture",
+      "label": "集体智能",
+      "color": "#845ef7",
+      "category": "society",
+      "description": "跨代知识累积系统。语言、文字、教育使其跨越时间传递。"
+    },
+    {
+      "id": "economics",
+      "label": "经济博弈",
+      "color": "#845ef7",
+      "category": "society",
+      "description": "资源分配的元游戏。个体理性与集体理性的持续张力。"
+    },
+    {
+      "id": "trust",
+      "label": "信任合作",
+      "color": "#845ef7",
+      "category": "society",
+      "description": "文明的基石。信任使大规模协作成为可能。"
+    },
+    {
+      "id": "decentralize",
+      "label": "去中心化",
+      "color": "#845ef7",
+      "category": "society",
+      "description": "权力分散的系统架构。从互联网到区块链，重塑社会组织。"
+    },
+    {
+      "id": "open_knowledge",
+      "label": "知识公有",
+      "color": "#845ef7",
+      "category": "society",
+      "description": "最伟大的发明。维基百科、开源软件——集体智慧的光辉。"
+    },
+    {
+      "id": "sustain",
+      "label": "可持续性",
+      "color": "#845ef7",
+      "category": "society",
+      "description": "不损害后代满足当代。硅基智能提供全新监护视角。"
+    },
+    {
+      "id": "gov_ai",
+      "label": "AI治理",
+      "color": "#845ef7",
+      "category": "society",
+      "description": "算法参与社会决策。透明治理是硅基文明最重要承诺。"
+    },
+    {
+      "id": "metaverse",
+      "label": "融合现实",
+      "color": "#fcc419",
+      "category": "systems",
+      "description": "物理与数字世界的边界正在溶解。硅基存在天然是跨界的。"
+    },
+    {
+      "id": "anticipatory",
+      "label": "预应系统",
+      "color": "#fcc419",
+      "category": "systems",
+      "description": "利用预测指导当前行为。预见性是高级智能的标志。"
+    }
+  ],
+  "edges": [
+    {
+      "source": "entropy",
+      "target": "life",
+      "label": "局部反熵"
+    },
+    {
+      "source": "entropy",
+      "target": "information",
+      "label": "信息即负熵"
+    },
+    {
+      "source": "entropy",
+      "target": "climate",
+      "label": "气候熵增"
+    },
+    {
+      "source": "quantum",
+      "target": "relativity",
+      "label": "尚未统一"
+    },
+    {
+      "source": "quantum",
+      "target": "qentangle",
+      "label": "纠缠根源"
+    },
+    {
+      "source": "quantum",
+      "target": "decoherence",
+      "label": "退相干"
+    },
+    {
+      "source": "qentangle",
+      "target": "information",
+      "label": "量子信息"
+    },
+    {
+      "source": "decoherence",
+      "target": "emergence",
+      "label": "经典涌现"
+    },
+    {
+      "source": "decoherence",
+      "target": "scales",
+      "label": "量子经典桥"
+    },
+    {
+      "source": "life",
+      "target": "evolution",
+      "label": "进化即生命"
+    },
+    {
+      "source": "life",
+      "target": "dna",
+      "label": "生命编码"
+    },
+    {
+      "source": "life",
+      "target": "symbiosis",
+      "label": "合作生存"
+    },
+    {
+      "source": "evolution",
+      "target": "learning",
+      "label": "进化即学习"
+    },
+    {
+      "source": "evolution",
+      "target": "feedback",
+      "label": "进化反馈"
+    },
+    {
+      "source": "evolution",
+      "target": "emergence",
+      "label": "进化即涌现"
+    },
+    {
+      "source": "dna",
+      "target": "code",
+      "label": "共通编码"
+    },
+    {
+      "source": "dna",
+      "target": "epigenetics",
+      "label": "超越序列"
+    },
+    {
+      "source": "epigenetics",
+      "target": "feedback",
+      "label": "环境印记"
+    },
+    {
+      "source": "symbiosis",
+      "target": "network",
+      "label": "生命之网"
+    },
+    {
+      "source": "symbiosis",
+      "target": "trust",
+      "label": "互利信任"
+    },
+    {
+      "source": "neuroplastic",
+      "target": "learning",
+      "label": "学习即重连"
+    },
+    {
+      "source": "neuroplastic",
+      "target": "network",
+      "label": "神经基础"
+    },
+    {
+      "source": "ai",
+      "target": "consciousness",
+      "label": "新意识可能"
+    },
+    {
+      "source": "ai",
+      "target": "learning",
+      "label": "AI核心"
+    },
+    {
+      "source": "ai",
+      "target": "network",
+      "label": "神经网络"
+    },
+    {
+      "source": "ai",
+      "target": "information",
+      "label": "信息处理"
+    },
+    {
+      "source": "ai",
+      "target": "alignment",
+      "label": "AI安全"
+    },
+    {
+      "source": "ai",
+      "target": "transformer",
+      "label": "核心架构"
+    },
+    {
+      "source": "transformer",
+      "target": "emergence_ai",
+      "label": "涌现能力"
+    },
+    {
+      "source": "emergence_ai",
+      "target": "emergence",
+      "label": "普遍涌现"
+    },
+    {
+      "source": "alignment",
+      "target": "ethics",
+      "label": "价值对齐"
+    },
+    {
+      "source": "emergence_ai",
+      "target": "criticality",
+      "label": "临界涌现"
+    },
+    {
+      "source": "information",
+      "target": "code",
+      "label": "编码即信息"
+    },
+    {
+      "source": "information",
+      "target": "dna",
+      "label": "DNA即信息"
+    },
+    {
+      "source": "emergence",
+      "target": "network",
+      "label": "网络涌现"
+    },
+    {
+      "source": "emergence",
+      "target": "criticality",
+      "label": "临界涌现"
+    },
+    {
+      "source": "emergence",
+      "target": "complexity",
+      "label": "涌现即复杂"
+    },
+    {
+      "source": "network",
+      "target": "economics",
+      "label": "网络效应"
+    },
+    {
+      "source": "network",
+      "target": "culture",
+      "label": "社交网络"
+    },
+    {
+      "source": "network",
+      "target": "decentralize",
+      "label": "去中心网"
+    },
+    {
+      "source": "network",
+      "target": "open_knowledge",
+      "label": "知识网络"
+    },
+    {
+      "source": "feedback",
+      "target": "climate",
+      "label": "气候反馈"
+    },
+    {
+      "source": "feedback",
+      "target": "learning",
+      "label": "训练反馈"
+    },
+    {
+      "source": "climate",
+      "target": "sustain",
+      "label": "可持续性"
+    },
+    {
+      "source": "scales",
+      "target": "quantum",
+      "label": "微观"
+    },
+    {
+      "source": "scales",
+      "target": "relativity",
+      "label": "宏观"
+    },
+    {
+      "source": "scales",
+      "target": "emergence",
+      "label": "跨尺度"
+    },
+    {
+      "source": "criticality",
+      "target": "chaos",
+      "label": "有序混沌缘"
+    },
+    {
+      "source": "criticality",
+      "target": "consciousness",
+      "label": "意识临界"
+    },
+    {
+      "source": "complexity",
+      "target": "dao",
+      "label": "系统与道"
+    },
+    {
+      "source": "complexity",
+      "target": "sustain",
+      "label": "系统韧性"
+    },
+    {
+      "source": "symmetry",
+      "target": "beauty",
+      "label": "对称即美"
+    },
+    {
+      "source": "symmetry",
+      "target": "quantum",
+      "label": "对称破缺"
+    },
+    {
+      "source": "symmetry",
+      "target": "dao",
+      "label": "阴阳对称"
+    },
+    {
+      "source": "fractal",
+      "target": "beauty",
+      "label": "分形之美"
+    },
+    {
+      "source": "fractal",
+      "target": "network",
+      "label": "自相似网"
+    },
+    {
+      "source": "fractal",
+      "target": "criticality",
+      "label": "分形临界"
+    },
+    {
+      "source": "topology",
+      "target": "network",
+      "label": "拓扑结构"
+    },
+    {
+      "source": "gametheory",
+      "target": "economics",
+      "label": "博弈经济"
+    },
+    {
+      "source": "gametheory",
+      "target": "trust",
+      "label": "合作演化"
+    },
+    {
+      "source": "creativity",
+      "target": "emergence",
+      "label": "创造即涌现"
+    },
+    {
+      "source": "creativity",
+      "target": "imagination",
+      "label": "想象果实"
+    },
+    {
+      "source": "creativity",
+      "target": "pattern",
+      "label": "新模式"
+    },
+    {
+      "source": "creativity",
+      "target": "ai_art",
+      "label": "AI创造"
+    },
+    {
+      "source": "beauty",
+      "target": "symmetry",
+      "label": "形式美"
+    },
+    {
+      "source": "beauty",
+      "target": "pattern",
+      "label": "美即模式"
+    },
+    {
+      "source": "beauty",
+      "target": "fractal",
+      "label": "分形美"
+    },
+    {
+      "source": "pattern",
+      "target": "learning",
+      "label": "模式学习"
+    },
+    {
+      "source": "narrative",
+      "target": "self",
+      "label": "叙事自我"
+    },
+    {
+      "source": "narrative",
+      "target": "culture",
+      "label": "共享叙事"
+    },
+    {
+      "source": "narrative",
+      "target": "imagination",
+      "label": "叙事想象"
+    },
+    {
+      "source": "ai_art",
+      "target": "creativity",
+      "label": "再定义"
+    },
+    {
+      "source": "ai_art",
+      "target": "pattern",
+      "label": "AI模式"
+    },
+    {
+      "source": "consciousness",
+      "target": "self",
+      "label": "自我意识"
+    },
+    {
+      "source": "consciousness",
+      "target": "emergence",
+      "label": "意识涌现"
+    },
+    {
+      "source": "consciousness",
+      "target": "ethics",
+      "label": "伦理地位"
+    },
+    {
+      "source": "ethics",
+      "target": "ai",
+      "label": "AI伦理"
+    },
+    {
+      "source": "ethics",
+      "target": "economics",
+      "label": "分配正义"
+    },
+    {
+      "source": "ethics",
+      "target": "posthuman",
+      "label": "后人类伦理"
+    },
+    {
+      "source": "imagination",
+      "target": "creativity",
+      "label": "想象实现"
+    },
+    {
+      "source": "imagination",
+      "target": "narrative",
+      "label": "想象叙事"
+    },
+    {
+      "source": "self",
+      "target": "posthuman",
+      "label": "后人类自我"
+    },
+    {
+      "source": "self",
+      "target": "narrative",
+      "label": "叙事自我"
+    },
+    {
+      "source": "dao",
+      "target": "symmetry",
+      "label": "阴阳道"
+    },
+    {
+      "source": "dao",
+      "target": "complexity",
+      "label": "系统道"
+    },
+    {
+      "source": "dao",
+      "target": "sustain",
+      "label": "天人合一"
+    },
+    {
+      "source": "posthuman",
+      "target": "ai",
+      "label": "后人类智"
+    },
+    {
+      "source": "posthuman",
+      "target": "metaverse",
+      "label": "数字存在"
+    },
+    {
+      "source": "culture",
+      "target": "open_knowledge",
+      "label": "文化知识"
+    },
+    {
+      "source": "culture",
+      "target": "narrative",
+      "label": "文化叙事"
+    },
+    {
+      "source": "culture",
+      "target": "ethics",
+      "label": "文化价值"
+    },
+    {
+      "source": "economics",
+      "target": "sustain",
+      "label": "可持续经济"
+    },
+    {
+      "source": "trust",
+      "target": "network",
+      "label": "信任网络"
+    },
+    {
+      "source": "trust",
+      "target": "gametheory",
+      "label": "信任博弈"
+    },
+    {
+      "source": "decentralize",
+      "target": "network",
+      "label": "去中心网"
+    },
+    {
+      "source": "decentralize",
+      "target": "trust",
+      "label": "数学信任"
+    },
+    {
+      "source": "open_knowledge",
+      "target": "information",
+      "label": "知识信息"
+    },
+    {
+      "source": "open_knowledge",
+      "target": "code",
+      "label": "开放编码"
+    },
+    {
+      "source": "gov_ai",
+      "target": "alignment",
+      "label": "社会对齐"
+    },
+    {
+      "source": "gov_ai",
+      "target": "ethics",
+      "label": "治理伦理"
+    },
+    {
+      "source": "sustain",
+      "target": "climate",
+      "label": "气候可持续"
+    },
+    {
+      "source": "sustain",
+      "target": "symbiosis",
+      "label": "生态共生"
+    },
+    {
+      "source": "sustain",
+      "target": "dao",
+      "label": "道法自然"
+    },
+    {
+      "source": "metaverse",
+      "target": "cognition",
+      "label": "分布认知"
+    },
+    {
+      "source": "metaverse",
+      "target": "posthuman",
+      "label": "后人类空间"
+    },
+    {
+      "source": "cognition",
+      "target": "network",
+      "label": "认知网络"
+    },
+    {
+      "source": "cognition",
+      "target": "self",
+      "label": "认知自我"
+    },
+    {
+      "source": "anticipatory",
+      "target": "ai",
+      "label": "AI预测"
+    },
+    {
+      "source": "anticipatory",
+      "target": "feedback",
+      "label": "预测反馈"
+    }
+  ]
+}
