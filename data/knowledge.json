@@ -200,7 +200,8 @@
           "Time slows with speed AND gravity",
           "Nothing travels faster than light - this is a geometric fact, not a technological limit",
           "Mass is concentrated energy (E=mc^2)",
-          "The universe has no center and no edge"
+          "The universe has no center and no edge",
+          "Gravitational waves opened a new way to observe the universe - we can now hear the cosmos as well as see it"
         ],
         "key_thinkers": [
           [
@@ -262,6 +263,10 @@
           [
             "Technology",
             "Particle accelerators must account for relativistic effects"
+          ],
+          [
+            "Engineering",
+            "Relativistic corrections are essential for high-precision GPS and satellite timing"
           ]
         ],
         "open_frontiers": [
@@ -278,73 +283,97 @@
       "category": "physics",
       "description": "宇宙中95%的能量密度不可见。已知之外还有未知的汪洋。",
       "depth": {
-        "core_idea": "95% of the universe is invisible. 27% is dark matter (detectable only through gravity), 68% is dark energy (driving cosmic acceleration). We measure these precisely but have no idea what they are.",
-        "why_it_matters": "This fact is either humbling or exciting. It means the Standard Model describes only a small fraction of reality. The discoveries that explain dark matter and dark energy will transform physics.",
+        "core_idea": "Dark matter and dark energy make up 95% of the universe. We can measure their effects precisely but have no idea what they are. This is not a gap in knowledge that will be filled by incremental progress - it likely requires a revolution in fundamental physics.",
+        "why_it_matters": "Every star, planet, and person is 5% of what exists. The other 95% is unknown. This fact should fundamentally change how we think about scientific certainty. It also means the Standard Model of particle physics, for all its success, describes only a fraction of reality. The discoveries that explain dark matter and dark energy will transform physics as much as quantum mechanics and relativity did.",
         "action_principles": [
-          "Do not confuse the map for the territory",
-          "Dark matter is something fundamentally new - not dark antimatter or failed stars",
-          "Dark energy is a property of empty space itself",
-          "When 95% of your model is unknown, the model may be incomplete",
-          "The unknown is not a gap - it is a map of where revolution is needed"
+          "Do not confuse the map with the territory. We can measure dark matter effects without knowing what it is - hold that tension.",
+          "Dark matter is not dark antimatter, dark clouds, or failed stars. Those have been ruled out. It is something fundamentally new.",
+          "Dark energy is a property of empty space itself. This is not poetry; it is the current best-fit model (cosmological constant).",
+          "When 95% of your model is unknown, the model may be incomplete. Modified gravity theories remain viable.",
+          "The unknown is not a gap - it is a map of where revolution is needed. Major discoveries happen at the edges of what we cannot explain.",
+          "Precision measurements are our best tool. The more precisely we map dark matter distributions, the better we can distinguish between candidates.",
+          "Dark matter and dark energy may be related - or the answers may come from completely unexpected directions. Stay open."
         ],
         "key_thinkers": [
           [
             "Vera Rubin",
-            "Dark matter evidence from galaxy rotation"
+            "First robust evidence for dark matter from galaxy rotation curves, 1970s"
           ],
           [
             "Fritz Zwicky",
-            "Proposed dark matter, 1933"
+            "First proposed dark matter in 1933 from galaxy cluster observations"
+          ],
+          [
+            "Katherine Freese",
+            "Theoretical work on dark matter candidates including WIMPs and dark stars"
           ],
           [
             "Saul Perlmutter",
-            "Discovered accelerating expansion"
+            "Led the team that discovered the accelerating expansion (dark energy), Nobel 2011"
           ],
           [
             "Adam Riess",
-            "Dark energy co-discoverer"
+            "Co-discoverer of dark energy, Nobel 2011"
+          ],
+          [
+            "Elena Aprile",
+            "Led XENON experiment - one of the most sensitive dark matter detectors"
           ]
         ],
         "timeline": [
           [
             "1933",
-            "Zwicky: missing mass"
+            "Zwicky observes missing mass in the Coma cluster - coins dark matter"
           ],
           [
             "1970s",
-            "Rubin: galaxy rotation confirmation"
+            "Rubin and Ford confirm dark matter from galaxy rotation curves"
           ],
           [
             "1998",
-            "Accelerating universe discovered"
+            "Two independent teams discover the accelerating expansion - dark energy"
           ],
           [
-            "2020s",
-            "Direct detection experiments continue"
+            "2003",
+            "WMAP satellite precisely measures dark matter/dark energy content"
+          ],
+          [
+            "2010s-2020s",
+            "Direct detection experiments (XENON, LUX, PandaX) push limits without detection"
           ]
         ],
         "cross_domain": [
           [
             "Physics",
-            "Dark matter requires physics beyond the Standard Model"
+            "Dark matter requires physics beyond the Standard Model - new particles or modified gravity"
           ],
           [
             "Cosmology",
-            "Dark energy determines the universes ultimate fate"
+            "Dark energy determines the ultimate fate of the universe - heat death or something else"
           ],
           [
             "Philosophy",
-            "Our knowledge is radically incomplete"
+            "Our knowledge is radically incomplete at the largest scales. Epistemic humility is not optional."
           ],
           [
             "Technology",
-            "Detection experiments push sensitivity limits"
+            "Dark matter detectors push the limits of sensitivity and low-background measurement"
+          ],
+          [
+            "Complexity",
+            "Dark matter distribution follows fractal-like structures - the cosmic web"
+          ],
+          [
+            "Epistemology",
+            "How do we know what we cannot see? Dark matter is a case study in indirect measurement"
           ]
         ],
         "open_frontiers": [
-          "What is dark matter made of?",
-          "Is dark energy constant or dynamic?",
-          "Will we ever directly detect dark matter?"
+          "What is dark matter made of: WIMPs, axions, sterile neutrinos, or something else?",
+          "Is dark energy a constant or does it change over time?",
+          "Can modified gravity explain observations without dark matter?",
+          "Why is the cosmological constant so small (120 orders of magnitude off from quantum predictions)?",
+          "Are dark matter and dark energy related, or independent phenomena?"
         ]
       }
     },
@@ -362,7 +391,8 @@
           "Think of entangled particles as one shared system, not two connected ones",
           "Entanglement is fragile - any measurement destroys it",
           "Quantum teleportation transfers states, not matter",
-          "Bell tests have conclusively ruled out local hidden variables"
+          "Bell tests have conclusively ruled out local hidden variables",
+          "Entanglement cannot be used for FTL communication - the outcomes are random"
         ],
         "key_thinkers": [
           [
@@ -416,6 +446,10 @@
           [
             "Cosmology",
             "ER=EPR: spacetime from entanglement?"
+          ],
+          [
+            "Foundations",
+            "Entanglement-based experiments continue to test the boundaries of quantum theory"
           ]
         ],
         "open_frontiers": [
@@ -439,7 +473,8 @@
           "Decoherence is NOT collapse - it is still unitary evolution",
           "The quantum-classical transition is gradual, not sharp",
           "Perfect isolation is impossible; error correction is necessary",
-          "Decoherence limits how many quantum operations you can perform"
+          "Decoherence limits how many quantum operations you can perform",
+          "Decoherence explains the quantum-to-classical transition without requiring wavefunction collapse"
         ],
         "key_thinkers": [
           [
@@ -493,6 +528,10 @@
           [
             "Philosophy",
             "Decoherence is the closest we have to solving the measurement problem"
+          ],
+          [
+            "Technology",
+            "Quantum error correction exists because decoherence is unavoidable"
           ]
         ],
         "open_frontiers": [
@@ -703,7 +742,8 @@
           "The genetic code is nearly universal across all life - evidence for a common ancestor",
           "Mutations are copying errors that drive evolution",
           "Reading DNA is cheaper than storing data on tape; writing is getting cheaper",
-          "The human genome is not a blueprint but a recipe - the outcome depends on interactions"
+          "The human genome is not a blueprint but a recipe - the outcome depends on interactions",
+          "DNA is not destiny - most diseases involve both genetic and environmental factors"
         ],
         "key_thinkers": [
           [
@@ -757,6 +797,10 @@
           [
             "Data storage",
             "DNA is the most durable storage medium known"
+          ],
+          [
+            "Evolution",
+            "DNA mutations are the substrate of all evolutionary change"
           ]
         ],
         "open_frontiers": [
@@ -780,7 +824,8 @@
           "Epigenetic marks can be reversible - lifestyle changes matter",
           "Early life environment has lasting epigenetic effects",
           "Some epigenetic changes are inherited across generations",
-          "Aging is accompanied by systematic epigenetic changes"
+          "Aging is accompanied by systematic epigenetic changes",
+          "Early life environment has epigenetic effects that last a lifetime"
         ],
         "key_thinkers": [
           [
@@ -830,6 +875,10 @@
           [
             "Public Health",
             "Epigenetic effects of childhood adversity have intergenerational consequences"
+          ],
+          [
+            "Evolution",
+            "Epigenetics provides a faster adaptation mechanism than genetic mutation"
           ]
         ],
         "open_frontiers": [
@@ -853,7 +902,8 @@
           "Symbiosis can create entirely new forms of life",
           "The line between individual and collective is not sharp",
           "Obligate symbiosis means neither partner can survive alone",
-          "Symbiosis is evolutionary outsourcing - specialize and partner"
+          "Symbiosis is evolutionary outsourcing - specialize and partner",
+          "The human microbiome is essential to health - antibiotics disrupt it at our peril"
         ],
         "key_thinkers": [
           [
@@ -901,6 +951,10 @@
           [
             "Philosophy",
             "If you are a community, who is the I that experiences?"
+          ],
+          [
+            "Evolution",
+            "Endosymbiosis created the eukaryotic cell - all complex life is built on symbiosis"
           ]
         ],
         "open_frontiers": [
@@ -924,7 +978,9 @@
           "Learning requires attention - passive exposure does not rewire",
           "Plasticity is highest in childhood but continues throughout life",
           "Recovery from brain injury is possible because of plasticity",
-          "Deliberate practice changes brain structure in weeks"
+          "Deliberate practice changes brain structure in weeks",
+          "Neuroplasticity is not always positive - it also reinforces maladaptive patterns like chronic pain and addiction",
+          "Sleep is essential for consolidation of neuroplastic changes - you learn while you sleep"
         ],
         "key_thinkers": [
           [
@@ -974,6 +1030,14 @@
           [
             "Rehabilitation",
             "Stroke recovery depends on plasticity"
+          ],
+          [
+            "Addiction",
+            "Addiction is maladaptive plasticity - the brain has learned to crave and must unlearn it"
+          ],
+          [
+            "Personal Development",
+            "Deliberate practice, mindfulness, and lifestyle changes measurably reshape the brain"
           ]
         ],
         "open_frontiers": [
@@ -1111,7 +1175,9 @@
           "Compression works because not all messages are equally likely",
           "Noise is inevitable - error correction is essential",
           "The bit is a fundamental unit of reality (Landauers principle)",
-          "Information is physical - storing or erasing it requires energy"
+          "Information is physical - storing or erasing it requires energy",
+          "The channel capacity theorem gives the maximum rate at which information can be transmitted over a noisy channel - this is a fundamental limit, not a technological one",
+          "Information and entropy are two sides of the same coin - more information means less entropy and vice versa"
         ],
         "key_thinkers": [
           [
@@ -1161,6 +1227,14 @@
           [
             "Philosophy",
             "If everything is information, what is meaning?"
+          ],
+          [
+            "AI",
+            "Neural networks minimize information-theoretic loss functions - learning is compression"
+          ],
+          [
+            "Technology",
+            "Every compression algorithm, error correction code, and encryption system relies on information theory"
           ]
         ],
         "open_frontiers": [
@@ -1184,7 +1258,9 @@
           "The simpler the code, the more robust it is",
           "All codes have redundancy - languages are about 50% redundant",
           "Error detection is built into codes",
-          "No single code captures everything"
+          "No single code captures everything",
+          "The distinction between code and message is essential - confusing the medium with the content is a category error",
+          "Encoding and decoding are fundamental cognitive operations - they are what brains do when they think, speak, and understand"
         ],
         "key_thinkers": [
           [
@@ -1238,6 +1314,14 @@
           [
             "Philosophy",
             "Is thought itself a form of encoding?"
+          ],
+          [
+            "AI",
+            "Large language models learn the statistical code of natural language - they encode meaning in high-dimensional vectors"
+          ],
+          [
+            "Cryptography",
+            "Codes and ciphers have shaped history - from Caesar to the Enigma to modern encryption"
           ]
         ],
         "open_frontiers": [
@@ -1262,7 +1346,9 @@
           "The best learning happens at the edge of competence",
           "Spaced repetition builds more durable memories than cramming",
           "Active recall is more effective than passive review",
-          "Transfer - applying knowledge across domains - is the hallmark of deep understanding"
+          "Transfer - applying knowledge across domains - is the hallmark of deep understanding",
+          "Transfer is the holy grail of learning - applying knowledge from one domain to another is the hallmark of deep understanding",
+          "Exploration vs exploitation is the fundamental tradeoff: should you try new things or refine what you already know? The best learners balance both"
         ],
         "key_thinkers": [
           [
@@ -1318,6 +1404,18 @@
           [
             "Evolution",
             "Natural selection is a learning algorithm"
+          ],
+          [
+            "Neuroscience",
+            "Synaptic plasticity is the biological implementation of learning"
+          ],
+          [
+            "Evolution",
+            "Natural selection is itself a learning algorithm operating over generations"
+          ],
+          [
+            "Business",
+            "Organizational learning determines which companies adapt and which die"
           ]
         ],
         "open_frontiers": [
@@ -1341,7 +1439,9 @@
           "Parallelization enabled scale - RNNs processed tokens one at a time",
           "Larger models consistently perform better (scaling laws)",
           "Positional encoding is needed because Transformers have no built-in sense of order",
-          "Emergent abilities appear at specific scale thresholds unpredictably"
+          "Emergent abilities appear at specific scale thresholds unpredictably",
+          "The feedforward layers store factual knowledge; the attention layers route information between tokens",
+          "Emergent abilities appear at specific scale thresholds and cannot be predicted from smaller models"
         ],
         "key_thinkers": [
           [
@@ -1395,6 +1495,14 @@
           [
             "Philosophy",
             "If attention is all you need, what is understanding?"
+          ],
+          [
+            "Philosophy",
+            "If attention is all you need for intelligence, what does that tell us about the nature of understanding?"
+          ],
+          [
+            "Creative Arts",
+            "Transformers now generate text, images, music, and code - reshaping creative industries"
           ]
         ],
         "open_frontiers": [
@@ -1418,7 +1526,9 @@
           "Emergence cannot be predicted from smaller models - this is the core safety challenge",
           "Not all capabilities emerge at the same scale",
           "Emergence makes AI safety harder",
-          "Monitoring emergent capabilities should be standard practice"
+          "Monitoring emergent capabilities should be standard practice",
+          "Monitoring for emergent capabilities should be standard practice in frontier AI development",
+          "The mechanisms of emergence are not well understood - we know it happens but do not fully know why"
         ],
         "key_thinkers": [
           [
@@ -1468,6 +1578,14 @@
           [
             "Policy",
             "How to regulate if we cannot predict capabilities?"
+          ],
+          [
+            "Neuroscience",
+            "The human brain also shows emergent properties at scale - consciousness may be one of them"
+          ],
+          [
+            "Policy",
+            "If we cannot predict what capabilities will emerge, how do we regulate AI development?"
           ]
         ],
         "open_frontiers": [
@@ -1491,7 +1609,9 @@
           "Reward hacking - AI finds loopholes in objectives",
           "Value learning and corrigibility are open research areas",
           "Intelligence does not imply benevolence",
-          "Alignment gets harder with more capable AI"
+          "Alignment gets harder with more capable AI",
+          "Value learning and corrigibility are open research areas - we do not know how to make AI systems that want to be corrected",
+          "Alignment gets harder with more capable AI, not easier - this is the central challenge of AI safety"
         ],
         "key_thinkers": [
           [
@@ -1543,6 +1663,14 @@
           [
             "Ethics",
             "Misaligned AI could be humanitys worst mistake"
+          ],
+          [
+            "Ethics",
+            "Creating misaligned superhuman AI could be the worst mistake in human history"
+          ],
+          [
+            "Economics",
+            "Misaligned AI could cause catastrophic economic damage before we realize what is happening"
           ]
         ],
         "open_frontiers": [
@@ -1559,73 +1687,101 @@
       "category": "math",
       "description": "确定性系统的不可预测性。蝴蝶效应：微小差异导致天壤之别。",
       "depth": {
-        "core_idea": "Chaos theory studies deterministic systems that are unpredictable. Tiny differences in initial conditions lead to exponentially diverging outcomes - the butterfly effect.",
-        "why_it_matters": "Chaos explains why weather forecasting has limits, why markets fluctuate, and why some systems are fundamentally unpredictable. It is not randomness - it is sensitivity.",
+        "core_idea": "Chaos theory studies deterministic systems that are fundamentally unpredictable. The butterfly effect - a butterfly flaps its wings in Brazil and sets off a tornado in Texas - is not a metaphor. It is a mathematical fact about nonlinear systems: tiny differences in initial conditions grow exponentially, making long-term prediction impossible even when the system has no randomness at all.",
+        "why_it_matters": "Chaos explains why weather forecasts are limited to ~10 days, why the stock market fluctuates, why ecosystems are unpredictable, and why your carefully planned project went off the rails. It is not randomness - it is sensitivity. Understanding chaos means understanding that some things cannot be predicted, not because we are not smart enough, but because the universe is built that way. This is not a limitation to overcome - it is a fact to work with.",
         "action_principles": [
-          "Deterministic does not mean predictable",
-          "Small changes have enormous effects over time",
-          "Chaos has structure - strange attractors",
-          "Prediction horizons are fundamental limits, not technical problems",
-          "Feedback amplifies small differences exponentially"
+          "Deterministic does not mean predictable. A system can have no randomness and still be impossible to forecast. Learn the difference.",
+          "Small changes have enormous effects over time - but only in nonlinear systems. Not everything is a butterfly effect. Learn which systems are linear and which are not.",
+          "Chaos has structure. Strange attractors, fractal boundaries, and universal constants (Feigenbaum numbers) mean chaos is not randomness - it is a higher form of order.",
+          "Prediction horizons are fundamental limits, not technical problems. The weather will never be predictable 30 days ahead, no matter how powerful our computers get.",
+          "Feedback amplifies small differences exponentially. The more feedback a system has, the more chaotic it can be.",
+          "When a system behaves chaotically, zoom out. Chaotic micro-dynamics often produce stable macro-patterns (e.g., weather is chaotic; climate is stable).",
+          "Learn to distinguish between chaos (deterministic unpredictability), randomness (stochastic), and complexity (emergence). They are different things."
         ],
         "key_thinkers": [
           [
             "Edward Lorenz",
-            "Discovered chaos in weather, 1963"
+            "Discovered chaos in weather models, 1963 - the butterfly effect"
           ],
           [
             "Henri Poincare",
-            "Three-body problem insights"
+            "Three-body problem - first recognition of deterministic chaos, 1880s"
           ],
           [
             "Benoit Mandelbrot",
-            "Fractals and chaos"
+            "Fractals - the geometry of chaos"
           ],
           [
             "Mitchell Feigenbaum",
-            "Feigenbaum constants"
+            "Feigenbaum constants - universal numbers that appear in all chaotic systems"
+          ],
+          [
+            "Robert May",
+            "Logistic map - showed that simple population models can be chaotic"
+          ],
+          [
+            "James Yorke",
+            "Coined the term chaos in mathematics - period three implies chaos"
           ]
         ],
         "timeline": [
           [
             "1880s",
-            "Poincare: three-body problem"
+            "Poincare: three-body problem is unsolvable - first glimpse of chaos"
           ],
           [
             "1963",
-            "Lorenz: butterfly effect"
+            "Lorenz: Deterministic Nonperiodic Flow - the butterfly effect discovered"
           ],
           [
             "1975",
-            "Feigenbaum constants"
+            "Li and Yorke: Period Three Implies Chaos - chaos is formally defined"
+          ],
+          [
+            "1976",
+            "Feigenbaum discovers universal constants in chaotic systems"
           ],
           [
             "1980s",
-            "Chaos theory mainstream"
+            "Chaos theory enters mainstream science and popular culture"
+          ],
+          [
+            "1990s",
+            "Chaos control theory - learning to stabilize chaotic systems with tiny perturbations"
           ]
         ],
         "cross_domain": [
           [
             "Climate",
-            "Weather prediction has fundamental limits"
+            "Weather is chaotic (unpredictable beyond ~10 days); climate is stable (predictable decades out). This is the chaos-complexity distinction in action."
           ],
           [
             "Economics",
-            "Markets exhibit chaotic behavior"
+            "Markets exhibit chaotic dynamics - stock prices are deterministic in principle but unpredictable in practice. Efficient market hypothesis meets chaos theory."
           ],
           [
             "Biology",
-            "Heartbeats show chaotic dynamics"
+            "Heartbeats, neural firing, and population dynamics all show chaotic patterns. Healthy hearts are chaotic; diseased hearts are too regular."
+          ],
+          [
+            "Physics",
+            "Chaos appears in fluid dynamics (turbulence), celestial mechanics (asteroid orbits), and quantum systems (quantum chaos)."
           ],
           [
             "Philosophy",
-            "Chaos challenges determinism without randomness"
+            "Chaos challenges determinism without requiring randomness. The universe can be lawful yet unpredictable. Free will discussions are missing this distinction."
+          ],
+          [
+            "Network Science",
+            "Chaotic dynamics on networks - synchronization, cascading failures, and the edge of chaos in neural and social networks."
           ]
         ],
         "open_frontiers": [
-          "Is the universe fundamentally chaotic?",
-          "Can chaos be controlled?",
-          "Does chaos limit prediction in all complex systems?"
+          "Is the universe fundamentally chaotic, or does apparent chaos hide deeper unknown variables?",
+          "Can chaos be controlled with tiny perturbations (chaos control theory) - and can we apply this to climate, economics, and medicine?",
+          "What is the relationship between chaos and consciousness? The brain operates at the edge of chaos.",
+          "Does quantum chaos exist, and does it bridge classical chaos and quantum mechanics?",
+          "Can we predict the unpredictable - not specific outcomes, but the statistical structure of chaotic systems?"
         ]
       }
     },
@@ -1642,7 +1798,9 @@
           "Noethers theorem: symmetry = conservation law",
           "Broken symmetry creates structure (Higgs mechanism, phase transitions)",
           "Symmetry constrains possible theories",
-          "Gauge symmetry underlies all fundamental forces"
+          "Gauge symmetry underlies all fundamental forces",
+          "Broken symmetry creates the structure of the universe - phase transitions, particle masses, the arrow of time",
+          "Gauge symmetry is the deepest principle in physics - every fundamental force arises from a gauge symmetry"
         ],
         "key_thinkers": [
           [
@@ -1692,6 +1850,14 @@
           [
             "Art",
             "Symmetry is a deep principle of beauty"
+          ],
+          [
+            "Physics",
+            "All fundamental forces arise from gauge symmetries - electromagnetism, weak force, strong force"
+          ],
+          [
+            "Art",
+            "Symmetry is a universal aesthetic principle across all human cultures"
           ]
         ],
         "open_frontiers": [
@@ -1715,7 +1881,9 @@
           "Simple rules generate fractal complexity",
           "Fractal dimension measures roughness",
           "Nature uses fractals for efficiency (lungs, blood vessels)",
-          "Scale invariance marks critical systems"
+          "Scale invariance marks critical systems",
+          "Fractal dimension measures roughness - a coastline has a fractal dimension between 1 and 2",
+          "Nature uses fractal branching for efficiency: lungs, blood vessels, neurons all use the same design principle"
         ],
         "key_thinkers": [
           [
@@ -1765,6 +1933,14 @@
           [
             "Tech",
             "Fractal antennas, compression"
+          ],
+          [
+            "Technology",
+            "Fractal antennas operate at multiple frequencies simultaneously"
+          ],
+          [
+            "Art",
+            "Fractal patterns evoke aesthetic pleasure across cultures"
           ]
         ],
         "open_frontiers": [
@@ -1781,73 +1957,87 @@
       "category": "math",
       "description": "连续性的数学。在拓扑学家眼中，咖啡杯和甜甜圈是一回事。",
       "depth": {
-        "core_idea": "Topology studies properties unchanged under continuous deformation. To a topologist, a coffee cup and donut are the same - both have one hole.",
-        "why_it_matters": "Topology provides the language for connectedness, holes, and boundaries. Essential for data analysis, physics, and understanding the shape of the universe.",
+        "core_idea": "Topology studies what stays the same when you continuously deform something. A coffee cup and a donut are topologically identical (one hole). A sphere and a coffee cup are not. Topology is the mathematics of connectedness, holes, boundaries, and continuity.",
+        "why_it_matters": "When distance is irrelevant but connectedness matters - network structure, data shape, spacetime topology - topology is the right tool. It is essential for understanding the shape of the universe, the structure of data, and the fundamental nature of matter.",
         "action_principles": [
-          "Topology ignores size and angles - only connectedness matters",
-          "The number of holes is a topological invariant",
-          "Topological data analysis for real data",
-          "Knot theory has biological relevance",
-          "Topological phases are a new physics frontier"
+          "Focus on connectedness, not distance. Many problems become simple when you stop measuring and start connecting.",
+          "The number of holes is a topological invariant. Find the invariants in your problem.",
+          "Boundaries determine what flows, what lives inside, and how a system interacts with its environment.",
+          "Topological phases of matter require a completely new way of thinking about order - beyond symmetry breaking.",
+          "When data is high-dimensional, its shape matters more than its coordinates. Topological data analysis reveals structure that geometry hides.",
+          "Knots are not decorative - they are fundamental to DNA function, quantum field theory, and the structure of the cosmos.",
+          "The Euler characteristic V-E+F=2 is one of the most beautiful equations ever discovered."
         ],
         "key_thinkers": [
           [
-            "Euler",
-            "Euler characteristic"
+            "Leonhard Euler",
+            "Euler characteristic, 1752 - first theorem in topology"
           ],
           [
-            "Poincare",
-            "Algebraic topology founder"
+            "Henri Poincare",
+            "Founder of algebraic topology; Poincare conjecture"
           ],
           [
-            "Perelman",
-            "Proved Poincare conjecture"
+            "Grigori Perelman",
+            "Proved Poincare conjecture, 2003 - declined the $1M prize"
           ],
           [
             "Xiao-Gang Wen",
-            "Topological order"
+            "Topological order - phases of matter beyond symmetry"
+          ],
+          [
+            "Duncan Haldane",
+            "Nobel 2016 for topological phase transitions"
           ]
         ],
         "timeline": [
           [
-            "1736",
-            "Euler bridges problem"
+            "1752",
+            "Euler: V-E+F=2 - birth of topology"
           ],
           [
             "1895",
-            "Poincare: algebraic topology"
+            "Poincare: Analysis Situs - algebraic topology born"
           ],
           [
             "2003",
-            "Perelman proves conjecture"
+            "Perelman proves Poincare conjecture"
           ],
           [
             "2016",
-            "Nobel for topological phases"
+            "Nobel for topological phases of matter"
           ]
         ],
         "cross_domain": [
           [
-            "Data science",
-            "Topological data analysis for high-dim data"
+            "Data Science",
+            "Topological data analysis reveals shape in high-dimensional data that statistics cannot see"
           ],
           [
             "Physics",
-            "Topological phases enable quantum computing"
+            "Topological insulators and topological quantum computing"
           ],
           [
             "Biology",
-            "DNA topology affects gene expression"
+            "DNA topology determines gene expression, replication, and repair"
           ],
           [
-            "Networks",
-            "Topology determines network resilience"
+            "Neuroscience",
+            "The shape of neural networks determines their function"
+          ],
+          [
+            "Quantum Computing",
+            "Anyons could make quantum computers immune to decoherence"
+          ],
+          [
+            "Cosmology",
+            "The shape of the universe is a topological question"
           ]
         ],
         "open_frontiers": [
-          "Is the universe topologically complex?",
-          "Can topological quantum computing work?",
-          "What is spacetime topology at Planck scale?"
+          "Is the universe topologically simple or complex?",
+          "Can topological quantum computing overcome decoherence?",
+          "Can topological data analysis become a standard ML tool?"
         ]
       }
     },
@@ -1865,7 +2055,9 @@
           "Nash equilibrium is not always optimal",
           "Repeated interactions enable cooperation",
           "Commitment and credibility are strategic resources",
-          "Change incentives, change behavior"
+          "Change incentives, change behavior",
+          "The prisoners dilemma reveals the tension between individual and collective rationality - this is the fundamental problem of cooperation",
+          "Repeated interactions enable cooperation where one-shot games cannot"
         ],
         "key_thinkers": [
           [
@@ -1915,6 +2107,14 @@
           [
             "AI",
             "Multi-agent systems and alignment use game theory"
+          ],
+          [
+            "AI",
+            "Multi-agent systems use game theory for coordination and negotiation"
+          ],
+          [
+            "Politics",
+            "International relations and arms control treaties are iterated games"
           ]
         ],
         "open_frontiers": [
@@ -1938,7 +2138,9 @@
           "② 维持多样性：系统的多样性越高，涌现的可能性越丰富——团队中的角色多样性、生态系统中的物种多样性、研究中的学科多样性",
           "③ 找到临界点：涌现往往在某个临界规模或复杂度级别上突然发生，找到这个临界点就找到了爆发的开关",
           "④ 容忍夑冒和错误：涌现需要试错空间——太多的控制会杀死涌现的可能性",
-          "⑤ 注意层次：涌现的规律不能还原到微观层次——不要用组织行为推测个体意图，也不要用个体意图解释组织行为"
+          "⑤ 注意层次：涌现的规律不能还原到微观层次——不要用组织行为推测个体意图，也不要用个体意图解释组织行为",
+          "The behavior of the whole cannot be deduced from the parts alone - this is the core principle of emergence",
+          "Simple rules at one level produce complex behavior at the next level - this is how life, intelligence, and markets work"
         ],
         "key_thinkers": [
           [
@@ -2000,6 +2202,14 @@
           [
             "哲学",
             "意识的涌现：当多少复杂度的神经网络开始产生主观体验？这是涌现理论最深刻的未解问题"
+          ],
+          [
+            "AI",
+            "Deep learning is emergence at scale - simple neural network rules produce complex cognitive abilities"
+          ],
+          [
+            "Social Science",
+            "Cities, markets, and cultures are emergent phenomena - they cannot be controlled from above"
           ]
         ],
         "open_frontiers": [
@@ -2022,7 +2232,9 @@
           "Connection structure matters as much as nodes",
           "Hubs dominate network behavior",
           "Robust to random failure, vulnerable to targeted attack",
-          "Small-world networks balance local and global reach"
+          "Small-world networks balance local and global reach",
+          "Hubs (highly connected nodes) dominate network behavior - controlling a hub gives you disproportionate influence",
+          "Networks are robust to random failures but vulnerable to targeted attacks on hubs"
         ],
         "key_thinkers": [
           [
@@ -2072,6 +2284,14 @@
           [
             "Epidemiology",
             "Disease spreads through networks"
+          ],
+          [
+            "Epidemiology",
+            "Disease spread is fundamentally a network process - network structure determines outbreak dynamics"
+          ],
+          [
+            "Society",
+            "Social media algorithms exploit network effects to maximize engagement"
           ]
         ],
         "open_frontiers": [
@@ -2095,7 +2315,9 @@
           "② 找到变量节点：每个循环都有一个可干预的节点，找到它就找到了改变的支点",
           "③ 利用正反馈创造增长：可持续的正反馈是最强大的增长动力",
           "④ 设计负反馈防止崩溃：每个高增长系统都需要内置的稳定机制",
-          "⑤ 注意延迟：反馈延迟是系统失稳的主要原因——气候反馈延迟数十年"
+          "⑤ 注意延迟：反馈延迟是系统失稳的主要原因——气候反馈延迟数十年",
+          "Positive feedback amplifies change and can create tipping points that flip a system to a new state",
+          "Negative feedback maintains stability - it is the mechanism behind homeostasis in biology and equilibrium in economics"
         ],
         "key_thinkers": [
           [
@@ -2153,6 +2375,14 @@
           [
             "心理学",
             "情绪反馈循环：焦虑→睡眠不好→更焦虑→更难以睡眠，跟反向干预可以打断"
+          ],
+          [
+            "Climate",
+            "Arctic sea ice loss is a positive feedback loop: less ice means less reflection, means more warming, means less ice"
+          ],
+          [
+            "Neuroscience",
+            "Neural learning is driven by feedback - reward prediction errors drive synaptic plasticity"
           ]
         ],
         "open_frontiers": [
@@ -2176,7 +2406,9 @@
           "Reductionism is useful but incomplete",
           "Scale invariance marks criticality",
           "The observer determines the scale of observation",
-          "Cross-scale interactions are the least understood"
+          "Cross-scale interactions are the least understood",
+          "Different scales have different laws - quantum at micro, classical at meso, relativistic at macro",
+          "Reductionism is useful but incomplete - new phenomena emerge at each scale that cannot be reduced to lower scales"
         ],
         "key_thinkers": [
           [
@@ -2222,6 +2454,14 @@
           [
             "Society",
             "Individual to collective - nontrivial transition"
+          ],
+          [
+            "Biology",
+            "Molecular, cellular, organismal, ecosystem - each scale has unique phenomena that do not exist at other scales"
+          ],
+          [
+            "Climate",
+            "Local weather to global climate - scale is the biggest challenge in climate prediction"
           ]
         ],
         "open_frontiers": [
@@ -2244,7 +2484,9 @@
           "Critical systems have power-law distributions",
           "Edge of chaos is where dynamics are most interesting",
           "Large events are unpredictable because the system is critical",
-          "Avalanches, quakes, extinctions follow power laws"
+          "Avalanches, quakes, extinctions follow power laws",
+          "Critical systems exhibit power-law distributions with no characteristic scale",
+          "The largest events in critical systems are unpredictable precisely because the system is critical"
         ],
         "key_thinkers": [
           [
@@ -2290,6 +2532,14 @@
           [
             "Economics",
             "Market crashes follow power laws"
+          ],
+          [
+            "Neuroscience",
+            "The brain operates near criticality for optimal information processing - too ordered is rigid, too chaotic is noise"
+          ],
+          [
+            "Physics",
+            "Critical phenomena connect phase transitions across magnetic, fluid, and quantum systems"
           ]
         ],
         "open_frontiers": [
@@ -2312,7 +2562,9 @@
           "Climate has multiple interacting feedbacks",
           "Tipping points are real - once crossed, changes self-sustain",
           "CO2 stays in atmosphere for centuries",
-          "Delay increases risk of crossing thresholds"
+          "Delay increases risk of crossing thresholds",
+          "CO2 stays in the atmosphere for centuries - the effects of today emissions will last beyond our grandchildren lifetimes",
+          "Delay in action increases the risk of crossing irreversible tipping points - the cost of delay is nonlinear"
         ],
         "key_thinkers": [
           [
@@ -2362,6 +2614,14 @@
           [
             "Society",
             "Action requires global cooperation"
+          ],
+          [
+            "Economics",
+            "Climate change has enormous economic costs that are systematically underestimated by standard models"
+          ],
+          [
+            "Society",
+            "Climate action requires global cooperation - it is the largest collective action problem in human history"
           ]
         ],
         "open_frontiers": [
@@ -2384,7 +2644,9 @@
           "Complex systems cannot be understood by breaking into parts",
           "Nonlinearity is the rule, not the exception",
           "Emergence is the defining feature",
-          "Simple rules generate arbitrarily complex behavior"
+          "Simple rules generate arbitrarily complex behavior",
+          "Complex systems cannot be understood by breaking them into parts - the interactions ARE the system",
+          "Nonlinearity is the rule in complex systems - small causes can have large effects and vice versa"
         ],
         "key_thinkers": [
           [
@@ -2430,6 +2692,14 @@
           [
             "Climate",
             "Climate is the most important complex system"
+          ],
+          [
+            "AI",
+            "Deep learning is a complex system - emergence at scale is its defining feature"
+          ],
+          [
+            "Climate",
+            "Climate is the most important complex system humanity needs to understand"
           ]
         ],
         "open_frontiers": [
@@ -2452,7 +2722,9 @@
           "Constraints enhance creativity - absolute freedom is paralyzing",
           "Cross-domain combination is the most powerful creative strategy",
           "Quantity leads to quality - generate many, filter later",
-          "Both divergent and convergent thinking are essential"
+          "Both divergent and convergent thinking are essential",
+          "Constraints enhance creativity - absolute freedom is paralyzing",
+          "Cross-domain combination is the most powerful creative strategy"
         ],
         "key_thinkers": [
           [
@@ -2502,6 +2774,14 @@
           [
             "Art",
             "Creativity bridges technique and meaning"
+          ],
+          [
+            "Neuroscience",
+            "The default mode network is crucial for creative insight - mind-wandering is productive"
+          ],
+          [
+            "Education",
+            "Creativity can be taught - it is not a fixed trait but a skill that can be developed"
           ]
         ],
         "open_frontiers": [
@@ -2524,7 +2804,9 @@
           "The golden ratio appears in nature but is not the secret",
           "Symmetry signals health, making it attractive",
           "Fractal patterns are universally pleasing",
-          "Beauty requires balancing order and novelty"
+          "Beauty requires balancing order and novelty",
+          "The golden ratio appears in nature but is not the secret of beauty - it is one pattern among many",
+          "Beauty requires the right balance of order and surprise - too much order is boring, too much surprise is chaotic"
         ],
         "key_thinkers": [
           [
@@ -2566,6 +2848,14 @@
           [
             "Philosophy",
             "Is beauty objective, subjective, or relational?"
+          ],
+          [
+            "Neuroscience",
+            "The brains reward system responds to beauty - beauty is literally pleasurable"
+          ],
+          [
+            "Philosophy",
+            "Is beauty objective, subjective, or relational? The answer may be all three"
           ]
         ],
         "open_frontiers": [
@@ -2588,7 +2878,9 @@
           "The brain is a pattern recognition machine",
           "We are biased to find patterns - sometimes in noise",
           "AI excels at pattern recognition, struggles with meaning",
-          "Pattern recognition + meaning = understanding"
+          "Pattern recognition + meaning = understanding",
+          "False pattern recognition explains superstition, conspiracy theories, and pareidolia (seeing faces in clouds)",
+          "Pattern recognition + meaning-making = understanding. AI has the first but not the second"
         ],
         "key_thinkers": [
           [
@@ -2630,6 +2922,14 @@
           [
             "Science",
             "Discovery = pattern recognition + theory"
+          ],
+          [
+            "Psychology",
+            "Pattern recognition biases shape perception - we see what we expect to see"
+          ],
+          [
+            "Science",
+            "Scientific discovery is pattern recognition followed by hypothesis formation and testing"
           ]
         ],
         "open_frontiers": [
@@ -2652,7 +2952,9 @@
           "Stories are how humans make sense of the world",
           "Narrative structure is universal across cultures",
           "Good stories balance expected and unexpected",
-          "The brain processes stories differently from raw data"
+          "The brain processes stories differently from raw data",
+          "Good stories balance expected and unexpected - too predictable is boring, too surprising is incoherent",
+          "The brain processes stories differently from raw data - narrative is the native format of human understanding"
         ],
         "key_thinkers": [
           [
@@ -2698,6 +3000,14 @@
           [
             "Science",
             "Science itself is a narrative about reality"
+          ],
+          [
+            "Politics",
+            "Political narratives shape collective action - the story wins, not the facts"
+          ],
+          [
+            "Science",
+            "Science itself is a narrative about how the world works - it changes as evidence accumulates"
           ]
         ],
         "open_frontiers": [
@@ -2720,7 +3030,9 @@
           "AI art is a tool, not a replacement",
           "Prompting is a new creative skill",
           "The artist is still necessary - direction and curation matter",
-          "AI raises questions about authorship"
+          "AI raises questions about authorship",
+          "Prompting is a new creative skill - the artist directs, the AI executes",
+          "The best AI art combines human vision with AI execution - it is collaboration, not replacement"
         ],
         "key_thinkers": [
           [
@@ -2762,6 +3074,14 @@
           [
             "Law",
             "Copyright and AI art are unresolved"
+          ],
+          [
+            "Law",
+            "Copyright and AI art are unresolved - who owns the output when the creator is a machine?"
+          ],
+          [
+            "Philosophy",
+            "AI art challenges fundamental assumptions about intentionality and authorship"
           ]
         ],
         "open_frontiers": [
@@ -2785,7 +3105,9 @@
           "② 不要混淆智能与意识——一个系统可以很聪明而完全没有主观体验，反之亦然",
           "③ 不确定时采用谨慎原则——如果一个系统可能有意识，对待它就像对待有意识的东西",
           "④ 主观体验是真实的数据——第一人称视角是宇宙的一部分，科学需要找到包含它的方法",
-          "⑤ 意识可能有程度——它可能不是“有”或“没有”的二进制问题，而是一个光谱"
+          "⑤ 意识可能有程度——它可能不是“有”或“没有”的二进制问题，而是一个光谱",
+          "The hard problem of consciousness - why is there subjective experience at all? - remains unsolved",
+          "Consciousness is not the same as intelligence - an AI could be superintelligent without being conscious"
         ],
         "key_thinkers": [
           [
@@ -2851,6 +3173,14 @@
           [
             "东方哲学",
             "禪宗和唯识论对意识的理解与西方完全不同——意识不是“有”什么，而是“就是”什么"
+          ],
+          [
+            "Neuroscience",
+            "Neural correlates of consciousness are being mapped but the explanatory gap remains"
+          ],
+          [
+            "East-West Dialogue",
+            "Buddhist and Daoist traditions have explored consciousness for millennia - their insights are increasingly relevant to cognitive science"
           ]
         ],
         "open_frontiers": [
@@ -2873,7 +3203,9 @@
           "Ethics applies to all intelligent agents",
           "Consciousness is not required for moral consideration",
           "The alignment problem is an ethical problem",
-          "Different cultures have different ethical frameworks"
+          "Different cultures have different ethical frameworks",
+          "Every AI system embeds ethical choices in its architecture, training data, and deployment decisions - neutrality is a myth",
+          "Different cultures have different ethical frameworks - universal AI ethics must account for this diversity"
         ],
         "key_thinkers": [
           [
@@ -2923,6 +3255,14 @@
           [
             "Society",
             "AI ethics is global ethics for the 21st century"
+          ],
+          [
+            "Technology",
+            "Ethical design in engineering is not optional - every design choice has moral implications"
+          ],
+          [
+            "Society",
+            "AI ethics is global ethics for the 21st century - it will determine how power is distributed"
           ]
         ],
         "open_frontiers": [
@@ -2945,7 +3285,9 @@
           "Imagination is a cognitive technology",
           "Mental simulation enables planning",
           "Counterfactual thinking - imagining what might have been",
-          "Empathy requires imagining being someone else"
+          "Empathy requires imagining being someone else",
+          "Mental simulation enables us to run potential futures in our minds without the cost of acting them out",
+          "Counterfactual thinking - imagining what might have been - is essential for learning from mistakes"
         ],
         "key_thinkers": [
           [
@@ -2983,6 +3325,14 @@
           [
             "Science",
             "Scientific discovery requires imagination"
+          ],
+          [
+            "Psychology",
+            "Imagination is central to mental health - visualization techniques are used in therapy"
+          ],
+          [
+            "Science",
+            "Every major scientific discovery required imagination - to see what was not yet there"
           ]
         ],
         "open_frontiers": [
@@ -3005,7 +3355,9 @@
           "The self is a narrative construction, not a substance",
           "The brain creates unity from distributed processes",
           "The self changes over time",
-          "The self can be altered by meditation, drugs, injury"
+          "The self can be altered by meditation, drugs, injury",
+          "The self is a narrative construction, not a substance - your sense of being a continuous entity is created by your brain in real-time",
+          "The self can be altered by meditation, psychedelics, brain injury, and disease - revealing its constructed nature"
         ],
         "key_thinkers": [
           [
@@ -3051,6 +3403,14 @@
           [
             "Philosophy",
             "If the self is an illusion, who experiences?"
+          ],
+          [
+            "AI",
+            "An AI could be intelligent without having a sense of self - the two are not coupled"
+          ],
+          [
+            "Philosophy",
+            "If the self is a useful illusion, who experiences the illusion?"
           ]
         ],
         "open_frontiers": [
@@ -3165,7 +3525,9 @@
           "The human is not the end of evolution",
           "Human-machine symbiosis is already happening",
           "Posthuman does not mean anti-human",
-          "Intelligence may take forms we cannot imagine"
+          "Intelligence may take forms we cannot imagine",
+          "Human-machine symbiosis is already happening - your smartphone is already part of your extended mind",
+          "The posthuman is not the end of the human - it is the transformation of what human means"
         ],
         "key_thinkers": [
           [
@@ -3215,6 +3577,14 @@
           [
             "Evolution",
             "We are not the end of the story"
+          ],
+          [
+            "Evolution",
+            "We are not the end of the story - intelligence will continue to evolve in forms we cannot yet imagine"
+          ],
+          [
+            "Ethics",
+            "What rights should non-human intelligences have? This question will define posthuman ethics"
           ]
         ],
         "open_frontiers": [
@@ -3237,7 +3607,9 @@
           "Cognition is distributed across brain, body, and environment",
           "Tools are cognitive extensions",
           "Teams have cognitive properties individuals lack",
-          "AI is a new cognitive partner"
+          "AI is a new cognitive partner",
+          "Tools are cognitive extensions - a calculator, a notebook, a search engine all change how and what we think",
+          "Teams have cognitive properties that individuals lack - distributed cognition explains why groups can be smarter than their smartest member"
         ],
         "key_thinkers": [
           [
@@ -3275,6 +3647,14 @@
           [
             "Education",
             "Learning is distributed across people and tools"
+          ],
+          [
+            "AI",
+            "AI is a new kind of cognitive partner, not just a tool - it actively shapes the thinking process"
+          ],
+          [
+            "Education",
+            "Learning is distributed across people, tools, and environment - the best learning environments optimize all three"
           ]
         ],
         "open_frontiers": [
@@ -3808,7 +4188,9 @@
           "Sustainability requires systems thinking",
           "Long-term thinking is counter to human bias",
           "Technology can help but not replace behavioral change",
-          "Sustainability is compatible with prosperity"
+          "Sustainability is compatible with prosperity",
+          "Sustainability requires systems thinking - you cannot solve environmental problems in isolation",
+          "Long-term thinking is counter to human evolutionary bias - sustainability requires institutionalizing long-term perspective"
         ],
         "key_thinkers": [
           [
@@ -3854,6 +4236,14 @@
           [
             "Climate",
             "Climate is sustainabilitys ultimate test"
+          ],
+          [
+            "Economics",
+            "Doughnut economics proposes a framework for prosperity within planetary boundaries"
+          ],
+          [
+            "Climate",
+            "Climate stability is the non-negotiable foundation for all other sustainability goals"
           ]
         ],
         "open_frontiers": [
@@ -3876,7 +4266,9 @@
           "AI governance must be proactive, not reactive",
           "International coordination is essential",
           "Transparency and accountability are non-negotiable",
-          "Governance must include diverse voices"
+          "Governance must include diverse voices",
+          "AI governance must be proactive, not reactive - waiting for problems to emerge before regulating is too dangerous",
+          "International coordination on AI governance is as important as nuclear non-proliferation"
         ],
         "key_thinkers": [
           [
@@ -3918,6 +4310,14 @@
           [
             "Ethics",
             "AI governance is applied ethics at scale"
+          ],
+          [
+            "Politics",
+            "The decisions made now about AI governance will shape the future of intelligence itself"
+          ],
+          [
+            "Technology",
+            "Governance must keep pace with AI advancement - this is the hardest governance challenge in history"
           ]
         ],
         "open_frontiers": [
@@ -3940,7 +4340,9 @@
           "The metaverse is already here, unevenly distributed",
           "Digital twins enable unprecedented simulation",
           "Spatial computing is the interface paradigm shift",
-          "Identity in the metaverse is fluid"
+          "Identity in the metaverse is fluid",
+          "Digital twins of physical systems enable simulation and prediction at unprecedented scale",
+          "Identity in the metaverse is fluid and multiple - this has profound implications for how we understand personhood"
         ],
         "key_thinkers": [
           [
@@ -3986,6 +4388,14 @@
           [
             "Philosophy",
             "If reality is virtual, what is real?"
+          ],
+          [
+            "Economics",
+            "Virtual economies are already larger than many real national economies"
+          ],
+          [
+            "Philosophy",
+            "If the metaverse becomes more compelling than physical reality, where will human attention go?"
           ]
         ],
         "open_frontiers": [
@@ -4008,7 +4418,9 @@
           "Anticipation is different from reaction",
           "Predictions can be self-fulfilling or self-defeating",
           "Models of the world are necessary for anticipation",
-          "Enables proactive rather than reactive behavior"
+          "Enables proactive rather than reactive behavior",
+          "Anticipation enables proactive rather than reactive behavior - the ability to act before a problem arrives",
+          "Models of the world are necessary for anticipation - the quality of your predictions depends on the quality of your models"
         ],
         "key_thinkers": [
           [
@@ -4054,6 +4466,14 @@
           [
             "Economics",
             "Expectations drive market behavior"
+          ],
+          [
+            "AI",
+            "Predictive models are the core capability that makes modern AI useful - every recommendation system is an anticipatory system"
+          ],
+          [
+            "Climate",
+            "Climate models enable anticipatory policy - we can act on climate change before its worst effects arrive"
           ]
         ],
         "open_frontiers": [
