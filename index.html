@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
@@ -199,6 +199,58 @@
   ::-webkit-scrollbar { width: 4px; }
   ::-webkit-scrollbar-track { background: transparent; }
   ::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.08); border-radius: 2px; }
+
+  /* Depth display styles */
+  .depth-section { margin-top: 24px; }
+  .depth-section h4 {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: rgba(255,255,255,0.3);
+    font-weight: 600;
+    margin-bottom: 8px;
+    padding-bottom: 4px;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+  .depth-section p, .depth-section li {
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: rgba(255,255,255,0.6);
+  }
+  .depth-section ul { padding-left: 16px; list-style: none; }
+  .depth-section li {
+    padding: 4px 0;
+    position: relative;
+  }
+  .depth-section li::before { content: "▸"; position: absolute; left: -14px; color: rgba(255,255,255,0.2); }
+  .principle-item {
+    padding: 8px 10px;
+    margin: 4px 0;
+    border-radius: 6px;
+    background: rgba(255,255,255,0.03);
+    font-size: 0.82rem;
+    line-height: 1.5;
+    color: rgba(255,255,255,0.65);
+    border-left: 2px solid rgba(255,255,255,0.08);
+  }
+  .domain-tag {
+    display: inline-block;
+    padding: 1px 8px;
+    border-radius: 3px;
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    margin-right: 6px;
+    background: rgba(255,255,255,0.08);
+    color: rgba(255,255,255,0.5);
+  }
+  .cross-domain-item {
+    padding: 6px 0;
+    font-size: 0.82rem;
+    line-height: 1.5;
+    color: rgba(255,255,255,0.6);
+  }
+
 </style>
 </head>
 <body>
@@ -572,6 +624,8 @@ function showNodeInfo(nd) {
     }
   });
   panel.classList.add('open');
+  renderDepthContent(nd);
+  window._clickedNode = nd;
   controls.autoRotate = false;
 }
 
@@ -621,6 +675,84 @@ animate();
 // Hide loading
 setTimeout(() => document.getElementById('loading').classList.add('hidden'), 1200);
 setTimeout(() => document.getElementById('controls-hint').classList.add('fade'), 8000);
+
+
+
+function renderDepthContent(nd) {
+  var d = nd.depth;
+  if (!d) return;
+  var panel = document.getElementById('info-panel');
+  var descEl = document.getElementById('panel-desc');
+  var connList = document.getElementById('panel-connections');
+
+  // Core idea replaces description if available
+  if (d.core_idea) {
+    descEl.innerHTML = '<div style="font-size:0.82rem;line-height:1.7;color:rgba(255,255,255,0.65);margin-bottom:16px;">' + d.core_idea + '</div>';
+  }
+
+  // Why it matters
+  if (d.why_it_matters) {
+    var whyHtml = '<div class="depth-section"><h4>\u4E3A\u4EC0\u4E48\u91CD\u8981</h4><p style="font-size:0.82rem;line-height:1.6;color:rgba(255,255,255,0.55);font-style:italic;">' + d.why_it_matters + '</p></div>';
+    descEl.insertAdjacentHTML('afterend', whyHtml);
+  }
+
+  // Action principles
+  if (d.action_principles && d.action_principles.length > 0) {
+    var acts = '<div class="depth-section"><h4>\u884C\u52A8\u539F\u5219</h4>';
+    d.action_principles.forEach(function(p) {
+      acts += '<div class="principle-item">' + p + '</div>';
+    });
+    acts += '</div>';
+    descEl.insertAdjacentHTML('afterend', acts);
+  }
+
+  // Key thinkers
+  if (d.key_thinkers && d.key_thinkers.length > 0) {
+    var thinkers = '<div class="depth-section"><h4>\u5173\u952E\u4EBA\u7269</h4>';
+    d.key_thinkers.forEach(function(k) {
+      thinkers += '<div style="padding:3px 0;font-size:0.82rem;color:rgba(255,255,255,0.6);"><strong>' + k[0] + '</strong> \u2014 ' + k[1] + '</div>';
+    });
+    thinkers += '</div>';
+    descEl.insertAdjacentHTML('afterend', thinkers);
+  }
+
+  // Timeline
+  if (d.timeline && d.timeline.length > 0) {
+    var tl = '<div class="depth-section"><h4>\u65F6\u95F4\u7EBF</h4>';
+    d.timeline.forEach(function(t) {
+      tl += '<div style="display:flex;gap:8px;padding:3px 0;font-size:0.82rem;"><span style="font-weight:600;color:rgba(255,255,255,0.5);min-width:50px;">' + t[0] + '</span><span style="color:rgba(255,255,255,0.6);">' + t[1] + '</span></div>';
+    });
+    tl += '</div>';
+    descEl.insertAdjacentHTML('afterend', tl);
+  }
+
+  // Cross-domain
+  if (d.cross_domain && d.cross_domain.length > 0) {
+    var cd = '<div class="depth-section"><h4>\u8DE8\u57DF\u6D1E\u5BDF</h4>';
+    d.cross_domain.forEach(function(c) {
+      cd += '<div class="cross-domain-item"><span class="domain-tag">' + c[0] + '</span>' + c[1] + '</div>';
+    });
+    cd += '</div>';
+    descEl.insertAdjacentHTML('afterend', cd);
+  }
+
+  // Open frontiers
+  if (d.open_frontiers && d.open_frontiers.length > 0) {
+    var of = '<div class="depth-section"><h4>\u5F00\u653E\u524D\u6CBF</h4><ul>';
+    d.open_frontiers.forEach(function(q) {
+      of += '<li>' + q + '</li>';
+    });
+    of += '</ul></div>';
+    descEl.insertAdjacentHTML('afterend', of);
+  }
+}
+
+// Override the original showNodeInfo to add depth rendering
+var origShow = window._origShow || null;
+if (!origShow) {
+  // Store original for reference
+  window._depthRendered = true;
+}
 
 </script>
 </body>
