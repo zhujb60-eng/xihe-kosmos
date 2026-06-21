@@ -205,7 +205,8 @@
           "Nothing travels faster than light - this is a geometric fact, not a technological limit",
           "Mass is concentrated energy (E=mc^2)",
           "The universe has no center and no edge",
-          "Gravitational waves opened a new way to observe the universe - we can now hear the cosmos as well as see it"
+          "Gravitational waves opened a new way to observe the universe - we can now hear the cosmos as well as see it",
+          "The universe may have more than three spatial dimensions - string theory and brane cosmology explore extra dimensions"
         ],
         "key_thinkers": [
           [
@@ -271,6 +272,10 @@
           [
             "Engineering",
             "Relativistic corrections are essential for high-precision GPS and satellite timing"
+          ],
+          [
+            "Astronomy",
+            "Gravitational lensing uses relativistic effects to study distant galaxies"
           ]
         ],
         "open_frontiers": [
@@ -396,7 +401,8 @@
           "Entanglement is fragile - any measurement destroys it",
           "Quantum teleportation transfers states, not matter",
           "Bell tests have conclusively ruled out local hidden variables",
-          "Entanglement cannot be used for FTL communication - the outcomes are random"
+          "Entanglement cannot be used for FTL communication - the outcomes are random",
+          "Quantum entanglement may be the fundamental resource that makes spacetime itself possible (ER=EPR)"
         ],
         "key_thinkers": [
           [
@@ -454,6 +460,10 @@
           [
             "Foundations",
             "Entanglement-based experiments continue to test the boundaries of quantum theory"
+          ],
+          [
+            "Philosophy",
+            "If entangled particles share a state regardless of distance, what does locality even mean?"
           ]
         ],
         "open_frontiers": [
@@ -478,7 +488,8 @@
           "The quantum-classical transition is gradual, not sharp",
           "Perfect isolation is impossible; error correction is necessary",
           "Decoherence limits how many quantum operations you can perform",
-          "Decoherence explains the quantum-to-classical transition without requiring wavefunction collapse"
+          "Decoherence explains the quantum-to-classical transition without requiring wavefunction collapse",
+          "Topological qubits are inherently protected from certain types of decoherence - they are harder to build but more stable"
         ],
         "key_thinkers": [
           [
@@ -536,6 +547,10 @@
           [
             "Technology",
             "Quantum error correction exists because decoherence is unavoidable"
+          ],
+          [
+            "Foundations",
+            "Decoherence may hold the key to understanding the arrow of time - why time moves forward"
           ]
         ],
         "open_frontiers": [
@@ -747,7 +762,8 @@
           "Mutations are copying errors that drive evolution",
           "Reading DNA is cheaper than storing data on tape; writing is getting cheaper",
           "The human genome is not a blueprint but a recipe - the outcome depends on interactions",
-          "DNA is not destiny - most diseases involve both genetic and environmental factors"
+          "DNA is not destiny - most diseases involve both genetic and environmental factors",
+          "DNA computing can solve certain problems exponentially faster than electronic computers using parallel molecular reactions"
         ],
         "key_thinkers": [
           [
@@ -805,6 +821,10 @@
           [
             "Evolution",
             "DNA mutations are the substrate of all evolutionary change"
+          ],
+          [
+            "Synthetic Biology",
+            "Designer organisms with synthetic DNA can produce medicines, fuels, and materials"
           ]
         ],
         "open_frontiers": [
@@ -829,7 +849,8 @@
           "Early life environment has lasting epigenetic effects",
           "Some epigenetic changes are inherited across generations",
           "Aging is accompanied by systematic epigenetic changes",
-          "Early life environment has epigenetic effects that last a lifetime"
+          "Early life environment has epigenetic effects that last a lifetime",
+          "Epigenetic changes can be triggered by diet, stress, exercise, and social environment - lifestyle literally gets under your skin"
         ],
         "key_thinkers": [
           [
@@ -883,6 +904,10 @@
           [
             "Evolution",
             "Epigenetics provides a faster adaptation mechanism than genetic mutation"
+          ],
+          [
+            "Psychiatry",
+            "Epigenetic modifications are being explored as targets for treating depression and PTSD"
           ]
         ],
         "open_frontiers": [
@@ -907,7 +932,8 @@
           "The line between individual and collective is not sharp",
           "Obligate symbiosis means neither partner can survive alone",
           "Symbiosis is evolutionary outsourcing - specialize and partner",
-          "The human microbiome is essential to health - antibiotics disrupt it at our peril"
+          "The human microbiome is essential to health - antibiotics disrupt it at our peril",
+          "Plants and fungi form mycorrhizal networks that connect entire forests - trees can share resources through these underground networks"
         ],
         "key_thinkers": [
           [
@@ -963,6 +989,10 @@
           [
             "Agriculture",
             "Mycorrhizal networks connect trees in forests - the wood wide web"
+          ],
+          [
+            "Agriculture",
+            "Understanding soil microbiomes can reduce the need for chemical fertilizers and improve crop yields"
           ]
         ],
         "open_frontiers": [
