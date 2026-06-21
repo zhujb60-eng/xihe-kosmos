@@ -4455,6 +4455,51 @@
       "source": "information",
       "target": "quantum",
       "label": "quantum information - the unification of information theory and quantum mechanics"
+    },
+    {
+      "source": "darkmatter",
+      "target": "complexity",
+      "label": "dark matter as emergent phenomenon at cosmic scale"
+    },
+    {
+      "source": "qentangle",
+      "target": "network",
+      "label": "quantum network theory - entanglement as network"
+    },
+    {
+      "source": "symbiosis",
+      "target": "economics",
+      "label": "mutualism and evolutionary economics of cooperation"
+    },
+    {
+      "source": "topology",
+      "target": "consciousness",
+      "label": "topological models of neural connectivity"
+    },
+    {
+      "source": "fractal",
+      "target": "climate",
+      "label": "fractal structures in climate and weather systems"
+    },
+    {
+      "source": "gametheory",
+      "target": "ethics",
+      "label": "game-theoretic models of ethical decision-making"
+    },
+    {
+      "source": "beauty",
+      "target": "dao",
+      "label": "Daoist aesthetics - beauty as natural spontaneity"
+    },
+    {
+      "source": "chaos",
+      "target": "climate",
+      "label": "chaotic dynamics in weather and climate systems"
+    },
+    {
+      "source": "topology",
+      "target": "quantum",
+      "label": "topological quantum computing and anyons"
     }
   ]
 }
