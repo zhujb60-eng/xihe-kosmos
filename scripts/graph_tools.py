@@ -118,8 +118,95 @@ def do_export(fp):
             f.write(f'{e["source"]},{e["target"]},"{e.get("label","")}"\n')
     print(f"Exported: nodes.csv ({len(nodes)} rows), edges.csv ({len(edges)} rows)")
 
+
+def do_query_path(fp, args):
+    """Find shortest path between two nodes"""
+    data = load(fp)
+    nodes = {n["id"]:n for n in data["nodes"]}
+    edges = data["edges"]
+    adj = {n["id"]:set() for n in data["nodes"]}
+    for e in edges:
+        adj[e["source"]].add(e["target"]); adj[e["target"]].add(e["source"])
+    if len(args)<2: print("Usage: query path [node1] [node2]"); return
+    s,t = args[0], args[1]
+    if s not in adj or t not in adj: print("Node not found"); return
+    visited, queue, parent = {s}, [(s,0)], {s:None}
+    while queue:
+        cur,dist = queue.pop(0)
+        if cur==t:
+            path=[]; n=t
+            while n: path.append(n); n=parent[n]
+            path.reverse()
+            print(f"Path ({dist} steps):")
+            for i,n in enumerate(path):
+                cat = nodes[n].get("category",""); lbl = nodes[n].get("label","")
+                print(f"  {i}. {n} ({lbl}) [{cat}]")
+            return
+        for nb in adj[cur]:
+            if nb not in visited:
+                visited.add(nb); queue.append((nb,dist+1)); parent[nb]=cur
+    print("No path found")
+
+def do_query_neighbors(fp, args):
+    """Show neighbors of a node"""
+    data = load(fp)
+    nodes = {n["id"]:n for n in data["nodes"]}
+    edges = data["edges"]
+    adj = {n["id"]:set() for n in data["nodes"]}
+    edge_map = {}
+    for e in edges:
+        adj[e["source"]].add(e["target"]); adj[e["target"]].add(e["source"])
+        edge_map[(e["source"],e["target"])] = e.get("label","")
+        edge_map[(e["target"],e["source"])] = e.get("label","")
+    if not args: print("Usage: query neighbors [node_id]"); return
+    nid = args[0]
+    if nid not in adj: print("Node not found"); return
+    n = nodes[nid]
+    print(f"Neighbors of {nid} ({n.get("label","")}) [{n.get("category","")}]:")
+    for nb in sorted(adj[nid], key=lambda x: nodes[x].get("label","")):
+        lbl = nodes[nb].get("label",""); cat = nodes[nb].get("category","")
+        el = edge_map.get((nid,nb),"")
+        print(f"  {nb} ({lbl}) [{cat}] - {el}")
+
+def do_query_search(fp, args):
+    """Search nodes by keyword"""
+    data = load(fp)
+    if not args: print("Usage: query search [keyword]"); return
+    kw = args[0].lower()
+    results = []
+    for n in data["nodes"]:
+        if kw in n["id"].lower() or kw in n.get("label","").lower() or kw in n.get("description","").lower():
+            results.append(n)
+        if "depth" in n and n["depth"]:
+            d = n["depth"]
+            for k in ["core_idea","why_it_matters"]:
+                if k in d and kw in str(d[k]).lower():
+                    results.append(n)
+                    break
+    print(f"Search results for "{kw}":")
+    for n in results[:20]:
+        print(f"  {n["id"]} ({n["label"]}) [{n["category"]}]")
+
+def do_query_category(fp, args):
+    """List all nodes in a category"""
+    data = load(fp)
+    if not args: print("Usage: query category [name]"); return
+    cat = args[0]
+    print(f"Category: {cat}")
+    for n in sorted(data["nodes"], key=lambda x: x["id"]):
+        if n["category"]==cat:
+            d = "\u2713" if n.get("depth") else " "
+            print(f"  [{d}] {n["id"]} - {n.get("label","")}")
+
+def do_query(fp, args):
+    sub = args[0] if args else ""
+    subs = {"path":do_query_path,"neighbors":do_query_neighbors,"search":do_query_search,"category":do_query_category}
+    if sub in subs:
+        subs[sub](fp, args[1:])
+    else:
+        print("Query subcommands: path, neighbors, search, category")
 if __name__ == "__main__":
-    cmds = {"validate":do_validate,"analyze":do_analyze,"stat":do_stat,"export":do_export}
+    cmds = {"validate":do_validate,"analyze":do_analyze,"stat":do_stat,"export":do_export, "query":do_query}
     cmd = sys.argv[1] if len(sys.argv)>1 else "stat"
     fp = sys.argv[2] if len(sys.argv)>2 else "data/knowledge.json"
     if cmd in cmds:

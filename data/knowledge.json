@@ -3291,64 +3291,96 @@
       "category": "society",
       "description": "跨代知识累积系统。语言、文字、教育使其跨越时间传递。",
       "depth": {
-        "core_idea": "Culture is accumulated knowledge, beliefs, and practices transmitted across generations. It is the human operating system - our collective intelligence.",
-        "why_it_matters": "Culture is what makes humans unique. It allows knowledge to accumulate across generations, creating collective intelligence beyond individual capacity.",
+        "core_idea": "Culture is humanitys operating system - the accumulated knowledge, beliefs, practices, and artifacts that persist across generations. It is collective intelligence made durable through language, writing, and institutions. Culture evolves faster than genes and solves problems no individual could solve alone.",
+        "why_it_matters": "Culture determines which societies thrive and which stagnate. Understanding how culture works - how it transmits, mutates, and selects - is essential for anyone trying to create change, whether in an organization, a community, or a civilization. Culture is not decoration; it is infrastructure.",
         "action_principles": [
-          "Culture is cumulative - each generation builds on the last",
-          "Language is the vehicle of culture",
-          "Culture evolves through variation and selection",
-          "The internet is a new kind of culture machine"
+          "Culture is cumulative - each generation builds on the last without starting from zero",
+          "Language is the vehicle of culture; writing made it persistent; the internet made it global",
+          "Culture evolves through variation and selection - ideas compete for attention and transmission",
+          "The best ideas do not always win; culture has its own fitness landscape",
+          "To change a culture, change what is rewarded and what is celebrated",
+          "Cultures that balance tradition (preserving what works) and innovation (exploring what might work) outlast those that favor one extreme",
+          "The internet has created the first global culture - but it is still learning how to govern itself"
         ],
         "key_thinkers": [
           [
             "Richard Dawkins",
-            "Meme theory"
+            "Meme theory - cultural evolution as Darwinian process"
           ],
           [
             "Jared Diamond",
-            "Cultural diffusion"
+            "Guns Germs and Steel - how geography shaped cultural development"
           ],
           [
             "Yuval Noah Harari",
-            "Sapiens - cultural revolution"
+            "Sapiens - the cognitive revolution that made human culture possible"
+          ],
+          [
+            "Claude Levi-Strauss",
+            "Structural anthropology - the deep patterns underlying all cultures"
+          ],
+          [
+            "E.O. Wilson",
+            "Consilience - the unity of knowledge across cultures and disciplines"
           ]
         ],
         "timeline": [
           [
-            "~70,000 BCE",
-            "Cognitive revolution"
+            "~70000 BCE",
+            "Cognitive revolution - symbolic thought and language emerge"
           ],
           [
             "~3500 BCE",
-            "Writing invented"
+            "Writing invented - culture becomes persistent across time"
+          ],
+          [
+            "~500 BCE",
+            "Axial Age - major philosophical and religious foundations laid across civilizations"
           ],
           [
             "1450",
-            "Printing press"
+            "Printing press - mass reproduction of culture begins"
           ],
           [
             "1990s",
-            "Internet culture"
+            "Internet - global culture emerges"
+          ],
+          [
+            "2020s",
+            "AI becomes a participant in culture, not just a tool"
           ]
         ],
         "cross_domain": [
           [
             "AI",
-            "AI is becoming a participant in culture"
-          ],
-          [
-            "Anthropology",
-            "Culture is humans adaptation strategy"
+            "AI is becoming a participant in cultural evolution, not just a tool - it creates, remixes, and transmits culture"
           ],
           [
             "Evolution",
-            "Cultural evolution is faster than genetic"
+            "Cultural evolution is thousands of times faster than genetic evolution"
+          ],
+          [
+            "Philosophy",
+            "Culture shapes what we perceive as truth, beauty, and goodness"
+          ],
+          [
+            "Technology",
+            "Every communication technology transforms culture - from writing to the internet to AI"
+          ],
+          [
+            "Psychology",
+            "Individual identity is constructed from cultural materials available to us"
+          ],
+          [
+            "Politics",
+            "The most stable political systems are those that align with deep cultural patterns"
           ]
         ],
         "open_frontiers": [
-          "Can AI participate in culture as a creator?",
-          "How does digital culture differ from oral/written?",
-          "Is culture evolving toward global consciousness?"
+          "Can AI genuinely participate in culture as a creator, or only as a tool?",
+          "How do we preserve cultural diversity in a globally connected world?",
+          "What happens to culture when AI can generate infinite content?",
+          "Are there universal cultural patterns that transcend individual societies?"
         ]
       }
     },
@@ -3359,60 +3391,100 @@
       "category": "society",
       "description": "资源分配的元游戏。个体理性与集体理性的持续张力。",
       "depth": {
-        "core_idea": "Economics studies resource allocation under scarcity. It is not about money - it is about choice under constraints.",
-        "why_it_matters": "Economic thinking helps make better decisions in every area. Scarcity is universal; good allocation is a skill.",
+        "core_idea": "Economics studies how humans allocate scarce resources among competing wants. It is not about money - it is about choice under constraint. Every decision is a tradeoff, and every tradeoff has an opportunity cost. Markets are powerful coordination mechanisms, but they are not magic; they fail, they concentrate power, and they cannot price everything that matters.",
+        "why_it_matters": "Economic thinking is a life skill. Understanding opportunity cost, incentives, externalities, and the difference between efficiency and equity helps you make better decisions as an individual, a professional, and a citizen. Economics done well reveals hidden tradeoffs; economics done poorly is ideology masquerading as science.",
         "action_principles": [
-          "All decisions involve tradeoffs",
-          "Opportunity cost is the real cost",
-          "Incentives shape behavior - design them carefully",
-          "Markets are powerful but not perfect"
+          "Every choice has an opportunity cost - the value of the next best alternative you did not choose",
+          "Incentives shape behavior - change the incentive structure and you change the outcome",
+          "Markets are efficient at allocation but blind to distribution - efficiency and equity are separate questions",
+          "Externalities are costs (or benefits) that the market does not price - they are the fundamental justification for regulation",
+          "Comparative advantage means even the least productive person has something they produce relatively better than others",
+          "The tragedy of the commons is real but not inevitable - communities can and do manage shared resources",
+          "Economic growth is not the same as human flourishing - measure what matters"
         ],
         "key_thinkers": [
           [
             "Adam Smith",
-            "Wealth of Nations, 1776"
+            "The Wealth of Nations (1776) - division of labor, invisible hand, foundational text"
           ],
           [
             "John Maynard Keynes",
-            "Macroeconomics"
+            "Macroeconomics, government intervention during recessions, demand-side economics"
+          ],
+          [
+            "Milton Friedman",
+            "Free markets, monetarism, the role of government in the economy"
           ],
           [
             "Elinor Ostrom",
-            "Commons governance"
+            "Beyond the tragedy of the commons - how communities successfully manage shared resources"
+          ],
+          [
+            "Amartya Sen",
+            "Development as freedom - economics as a tool for human capability, not just output"
+          ],
+          [
+            "Kate Raworth",
+            "Doughnut Economics - a framework for sustainable and equitable prosperity"
           ]
         ],
         "timeline": [
           [
             "1776",
-            "Smith: Wealth of Nations"
+            "Smith: The Wealth of Nations - economics as a discipline is born"
           ],
           [
             "1936",
-            "Keynes: General Theory"
+            "Keynes: General Theory - macroeconomics and government intervention"
+          ],
+          [
+            "1960s",
+            "Friedman: monetarism challenges Keynesian consensus"
+          ],
+          [
+            "1970s",
+            "Ostrom begins documenting successful commons governance"
           ],
           [
             "2009",
-            "Ostrom: Nobel for commons"
+            "Ostrom wins Nobel for commons governance"
+          ],
+          [
+            "2017",
+            "Raworth: Doughnut Economics challenges growth paradigm"
           ]
         ],
         "cross_domain": [
           [
             "AI",
-            "AI changes production functions fundamentally"
+            "AI changes the production function fundamentally - prediction becomes cheap, reshoring becomes economic"
           ],
           [
             "Environment",
-            "Ecological economics challenges growth"
+            "Ecological economics challenges the assumption that growth can continue indefinitely"
           ],
           [
             "Technology",
-            "Digital goods have zero marginal cost"
+            "Digital goods have zero marginal cost - traditional pricing models break down"
+          ],
+          [
+            "Psychology",
+            "Behavioral economics shows humans are not rational actors - we are predictably irrational"
+          ],
+          [
+            "Politics",
+            "Inequality is not just an economic outcome - it is a political choice embedded in policy"
+          ],
+          [
+            "Evolution",
+            "Markets are evolutionary systems - firms compete, business models mutate, bankruptcies are extinction events"
           ]
         ],
         "open_frontiers": [
-          "How will AI reshape economics?",
-          "Can economics account for ecological limits?",
-          "Post-scarcity economics?"
+          "How will AI reshape economic models when prediction is nearly free?",
+          "Can we design an economic system that is both prosperous and sustainable?",
+          "How do we measure well-being beyond GDP?",
+          "Will universal basic income become necessary as AI automates more work?"
         ]
       }
     },
@@ -3423,64 +3495,91 @@
       "category": "society",
       "description": "文明的基石。信任使大规模协作成为可能。",
       "depth": {
-        "core_idea": "Trust is the expectation that others will act cooperatively. It is the foundation of civilization - without it, complex society collapses.",
-        "why_it_matters": "Trust is not soft - it is the most efficient coordination mechanism. Low trust societies are poor; high trust societies thrive.",
+        "core_idea": "Trust is the expectation that another party will act cooperatively. It is the lubrication that makes complex society possible - without trust, every transaction requires lawyers, contracts, and enforcement. Trust reduces uncertainty, lowers transaction costs, and enables cooperation at scale. It is built slowly, destroyed quickly, and once broken, nearly impossible to fully restore.",
+        "why_it_matters": "Trust is not soft or naive - it is the most efficient cooperation mechanism ever evolved. Low-trust societies are trapped in poverty and conflict; high-trust societies thrive. Understanding how trust is built, maintained, and destroyed is essential for leaders, entrepreneurs, and anyone building systems that depend on human cooperation.",
         "action_principles": [
-          "Trust reduces transaction costs enormously",
-          "Trust is built slowly and destroyed quickly",
-          "Trust requires repeated positive interactions",
-          "Institutional trust enables large-scale cooperation"
+          "Trust is built through repeated positive interactions over time - there are no shortcuts",
+          "Trust is destroyed instantly by a single betrayal - the asymmetry is structural, not personal",
+          "Institutional trust enables cooperation between strangers - this is what makes modern civilization possible",
+          "Transparency is not the same as trust - transparency enables verification, trust enables action without verification",
+          "The best way to build trust is to be trustworthy - not to signal trustworthiness",
+          "Institutions that punish defectors make trust more rational and therefore more common",
+          "Digital trust (blockchain, reputation systems) is a new form of trust that may supplement or replace traditional forms"
         ],
         "key_thinkers": [
           [
             "Francis Fukuyama",
-            "Trust: social virtues and prosperity"
+            "Trust: The Social Virtues and the Creation of Prosperity - link between trust and economic success"
           ],
           [
             "Robert Putnam",
-            "Bowling Alone - social capital"
+            "Bowling Alone - the decline of social capital and trust in America"
+          ],
+          [
+            "Diego Gambetta",
+            "Trust: Making and Breaking Cooperative Relations - analytical framework"
           ],
           [
             "Elinor Ostrom",
-            "Trust in commons management"
+            "Trust and cooperation in commons management - empirical studies of successful trust-based systems"
+          ],
+          [
+            "Satoshi Nakamoto",
+            "Bitcoin - trustless trust through cryptographic proof"
           ]
         ],
         "timeline": [
           [
+            "1970s",
+            "Trust becomes a formal topic in game theory and cooperative behavior"
+          ],
+          [
             "1995",
-            "Fukuyama: Trust"
+            "Fukuyama: Trust - links trust to economic prosperity across cultures"
           ],
           [
             "2000",
-            "Social capital research grows"
+            "Putnam: Bowling Alone - documents declining social trust in America"
+          ],
+          [
+            "2008",
+            "Nakamoto: Bitcoin whitepaper - trust minimized through cryptographic consensus"
           ],
           [
             "2010s",
-            "Digital trust and blockchain"
+            "Blockchain, reputation systems, and decentralized trust mechanisms proliferate"
           ]
         ],
         "cross_domain": [
           [
             "AI",
-            "Trust in AI is essential for adoption"
+            "Can we trust AI systems? Trust in AI requires reliability, transparency, and alignment with human values"
           ],
           [
             "Economics",
-            "Trust reduces transaction costs"
+            "Trust reduces transaction costs - low-trust economies are poor economies"
           ],
           [
             "Society",
-            "Trust is the fabric of social cohesion"
+            "Trust is the foundation of social cohesion - declining trust correlates with political polarization"
           ],
           [
             "Technology",
-            "Blockchain enables trust without intermediaries"
+            "Blockchain and cryptographic systems enable trust between parties who do not know each other"
+          ],
+          [
+            "Psychology",
+            "Trust is a cognitive heuristic that simplifies complex social decisions"
+          ],
+          [
+            "Politics",
+            "Democratic institutions depend on public trust - when trust erodes, democracy erodes with it"
           ]
         ],
         "open_frontiers": [
-          "Can we trust AI?",
-          "How is digital trust different?",
-          "Can trust be engineered into systems?"
+          "Can AI systems be trustworthy in the same way humans can?",
+          "How do we rebuild trust in institutions that have lost it?",
+          "Is decentralized trust (blockchain) a genuine replacement for institutional trust?"
         ]
       }
     },
@@ -3491,60 +3590,96 @@
       "category": "society",
       "description": "权力分散的系统架构。从互联网到区块链，重塑社会组织。",
       "depth": {
-        "core_idea": "Decentralization distributes power away from single points of control. It is a design principle for resilience, freedom, and innovation.",
-        "why_it_matters": "Centralized systems are efficient but fragile; decentralized systems are resilient but slower. The right balance depends on context.",
+        "core_idea": "Decentralization distributes power, control, and decision-making away from single points of authority. It is a design principle for resilience, freedom, and innovation. Centralized systems are efficient but fragile; decentralized systems are resilient but slower and less coherent. The right balance depends on the context, but the default bias in most systems is toward centralization - and that bias should be questioned.",
+        "why_it_matters": "Decentralization is not a political ideology - it is an engineering principle. Understanding when to centralize and when to decentralize is essential for designing any system that needs to survive and adapt. The internet was designed as a decentralized network and it became the most creative platform in history - that is not a coincidence.",
         "action_principles": [
-          "No single point of failure or control",
-          "Decentralization trades efficiency for resilience",
-          "Local knowledge is valuable",
-          "Decentralization is a spectrum, not binary"
+          "No single point of failure or control - resilience through distribution",
+          "Decentralization trades efficiency for resilience and local autonomy",
+          "Local knowledge is real - central planners cannot know what local actors know",
+          "Emergence is richer in decentralized systems - innovation happens at the edges",
+          "Decentralization is a spectrum, not binary - most systems need a mix of both",
+          "Network effects create natural monopolies that tend toward centralization - this must be actively resisted",
+          "Governance is the hardest problem in decentralized systems - who decides how decisions are made?"
         ],
         "key_thinkers": [
           [
+            "Vannevar Bush",
+            "As We May Think (1945) - vision of decentralized knowledge access"
+          ],
+          [
             "Tim Berners-Lee",
-            "Decentralized web vision"
+            "World Wide Web - decentralized information sharing, open standards"
           ],
           [
             "Satoshi Nakamoto",
-            "Bitcoin - decentralized currency"
+            "Bitcoin - decentralized currency without central authority"
           ],
           [
             "Vitalik Buterin",
-            "Ethereum - decentralized computing"
+            "Ethereum - decentralized computing platform"
+          ],
+          [
+            "Elinor Ostrom",
+            "Polycentric governance - multiple centers of decision-making for shared resources"
           ]
         ],
         "timeline": [
           [
-            "1990s",
-            "World Wide Web"
+            "1945",
+            "Bush: As We May Think - memex as decentralized knowledge machine"
           ],
           [
-            "2009",
-            "Bitcoin"
+            "1969",
+            "ARPANET - decentralized network architecture"
+          ],
+          [
+            "1991",
+            "World Wide Web - decentralized information publishing"
+          ],
+          [
+            "2008",
+            "Bitcoin whitepaper - decentralized currency"
           ],
           [
             "2015",
-            "Ethereum"
+            "Ethereum - decentralized applications"
+          ],
+          [
+            "2020s",
+            "Decentralized autonomous organizations (DAOs) experiment with new governance models"
           ]
         ],
         "cross_domain": [
           [
             "AI",
-            "Decentralized AI prevents power concentration"
+            "Decentralized AI development prevents concentration of power - but requires coordination"
           ],
           [
             "Technology",
-            "Blockchain enables decentralized coordination"
+            "The internet is the most powerful example of decentralized architecture in history"
           ],
           [
             "Politics",
-            "Decentralized governance models"
+            "Subsidiarity - decisions should be made at the most local level possible"
+          ],
+          [
+            "Economics",
+            "Markets are decentralized coordination mechanisms - central planning failed"
+          ],
+          [
+            "Governance",
+            "The most successful open source projects combine decentralized contribution with centralized decision-making"
+          ],
+          [
+            "Resilience",
+            "Decentralized systems survive shocks that destroy centralized ones - but they are slower to respond"
           ]
         ],
         "open_frontiers": [
-          "How decentralized should AI be?",
-          "Web3 tradeoffs?",
-          "Can decentralized systems scale?"
+          "How decentralized should AI governance be?",
+          "Can decentralized systems scale without becoming centralized in practice?",
+          "What governance models work for decentralized communities?",
+          "Is decentralization always preferable, or are there domains where centralization is genuinely better?"
         ]
       }
     },
@@ -3555,64 +3690,108 @@
       "category": "society",
       "description": "最伟大的发明。维基百科、开源软件——集体智慧的光辉。",
       "depth": {
-        "core_idea": "Open knowledge means information and knowledge should be freely available. It is the foundation of science, democracy, and progress.",
-        "why_it_matters": "Knowledge grows fastest when shared freely. Every closed door slows discovery.",
+        "core_idea": "Open knowledge is the principle that information and knowledge should be freely available to everyone to access, use, modify, and share. It is the foundation of science (which progresses through open publication), democracy (which requires informed citizens), and human progress (which builds on accumulated knowledge). Every closed door slows discovery; every paywalled paper delays a cure.",
+        "why_it_matters": "Open knowledge is not charity or ideology - it is the most efficient way to advance human understanding. The open source software movement proved that peer production can outperform corporate development. The open access movement proved that publicly funded research should be publicly available. The question is no longer whether openness works - it is how to sustain it.",
         "action_principles": [
-          "Knowledge grows fastest when shared freely",
-          "Open access accelerates science",
-          "Open source is open knowledge in action",
-          "The internet enables open knowledge at scale"
+          "Knowledge grows fastest when shared freely - this is an empirical claim, not a political one",
+          "Open access accelerates scientific discovery - paywalled research slows down everyone",
+          "Open source software is the most successful example of open knowledge in action",
+          "The internet makes open knowledge possible at a scale never before imaginable",
+          "Free does not mean without quality control - open systems need peer review, curation, and governance",
+          "Open knowledge can be exploited by bad actors - openness requires defense against manipulation",
+          "The tension between openness and commercial sustainability is real and unsolved"
         ],
         "key_thinkers": [
           [
             "Aaron Swartz",
-            "Open access activist"
+            "Open access activist - fought for free access to academic research"
           ],
           [
             "Lawrence Lessig",
-            "Creative Commons"
+            "Creative Commons licenses - legal infrastructure for open knowledge sharing"
           ],
           [
             "Jimmy Wales",
-            "Wikipedia"
+            "Wikipedia - free encyclopedia that proved peer-produced knowledge can work at scale"
           ],
           [
             "Tim Berners-Lee",
-            "Open web standards"
+            "Open web standards - the foundational layer of open knowledge on the internet"
+          ],
+          [
+            "Peter Suber",
+            "Open access movement leader - articulated the case for open access to research"
+          ],
+          [
+            "Linus Torvalds",
+            "Linux kernel - proved open source could produce world-class software"
           ]
         ],
         "timeline": [
           [
+            "1945",
+            "Bush: As We May Think - vision of hypertext knowledge access"
+          ],
+          [
+            "1980s",
+            "Free software movement (Stallman, GNU project)"
+          ],
+          [
+            "1991",
+            "Linux kernel released - open source software goes mainstream"
+          ],
+          [
             "2001",
-            "Wikipedia founded"
+            "Wikipedia founded - free encyclopedia for everyone"
+          ],
+          [
+            "2002",
+            "Creative Commons licenses launched"
           ],
           [
             "2003",
-            "Berlin Declaration on Open Access"
+            "Berlin Declaration on Open Access to Knowledge in the Sciences and Humanities"
           ],
           [
             "2010s",
-            "Open science movement"
+            "Open science, open data, open education movements grow rapidly"
+          ],
+          [
+            "2020s",
+            "The open vs closed AI model debate becomes central to AI policy"
           ]
         ],
         "cross_domain": [
           [
             "AI",
-            "Open vs closed AI models debate"
+            "The debate between open and closed AI models is the most important open knowledge question of our time"
           ],
           [
             "Science",
-            "Open science accelerates discovery"
+            "Open access accelerates scientific discovery - the evidence is overwhelming"
           ],
           [
             "Education",
-            "Open educational resources democratize learning"
+            "Open educational resources democratize learning globally"
+          ],
+          [
+            "Democracy",
+            "An informed citizenry requires access to knowledge - open knowledge is essential for democracy"
+          ],
+          [
+            "Economics",
+            "Open source is the dominant development model in software - proprietary is the exception, not the rule"
+          ],
+          [
+            "Philosophy",
+            "If knowledge is a public good, who should pay for its production?"
           ]
         ],
         "open_frontiers": [
-          "How open should AI models be?",
-          "Can open knowledge survive commercial pressures?",
-          "Openness vs privacy balance?"
+          "How open should AI models be - is full openness compatible with safety?",
+          "Can open knowledge production be sustained without corporate or government funding?",
+          "How do we protect open knowledge from misinformation and manipulation at scale?",
+          "What is the right balance between open access and creator compensation?"
         ]
       }
     },
@@ -4500,6 +4679,46 @@
       "source": "topology",
       "target": "quantum",
       "label": "topological quantum computing and anyons"
+    },
+    {
+      "source": "quantum",
+      "target": "consciousness",
+      "label": "the measurement problem connects quantum mechanics to consciousness"
+    },
+    {
+      "source": "quantum",
+      "target": "evolution",
+      "label": "quantum mutations? quantum effects in biological variation"
+    },
+    {
+      "source": "relativity",
+      "target": "network",
+      "label": "spacetime as a network - causal set theory"
+    },
+    {
+      "source": "life",
+      "target": "complexity",
+      "label": "life as the most complex adaptive system known"
+    },
+    {
+      "source": "evolution",
+      "target": "creativity",
+      "label": "evolution as a creative algorithm - blind variation and selective retention"
+    },
+    {
+      "source": "information",
+      "target": "culture",
+      "label": "information dynamics in cultural evolution"
+    },
+    {
+      "source": "chaos",
+      "target": "network",
+      "label": "chaotic dynamics in network systems"
+    },
+    {
+      "source": "feedback",
+      "target": "neuroplastic",
+      "label": "feedback-driven learning in neural plasticity"
     }
   ]
 }
