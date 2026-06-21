@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>建议节点 | Suggest a Node</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#0a0a12;color:#e0e0e8;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;min-height:100vh}
+.header{background:linear-gradient(135deg,#1a1a2e,#0a0a12);padding:32px 24px 24px;border-bottom:1px solid rgba(255,255,255,0.06)}
+.header h1{font-size:1.4rem;font-weight:700;color:#fbbf24;margin-bottom:4px}
+.header p{font-size:0.8rem;color:rgba(255,255,255,0.4)}
+.main{max-width:680px;margin:0 auto;padding:24px}
+.form-group{margin-bottom:20px}
+.form-group label{display:block;font-size:0.75rem;color:rgba(255,255,255,0.5);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:6px;font-weight:600}
+.form-group input,.form-group select,.form-group textarea{width:100%;padding:10px 12px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:6px;color:#e0e0e8;font-size:0.9rem;transition:border-color 0.2s}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{outline:none;border-color:#fbbf24;background:rgba(255,255,255,0.06)}
+.form-group textarea{resize:vertical;min-height:60px;font-family:inherit}
+.form-group select{-webkit-appearance:none;-moz-appearance:none;appearance:none;background-image:url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='%23666' stroke-width='1.5'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center;padding-right:32px}
+.section-toggle{display:flex;align-items:center;gap:8px;padding:10px 14px;background:rgba(251,191,36,0.06);border:1px solid rgba(251,191,36,0.12);border-radius:6px;cursor:pointer;font-size:0.85rem;color:#fbbf24;margin-bottom:16px;transition:all 0.2s}
+.section-toggle:hover{background:rgba(251,191,36,0.1)}
+.depth-section{display:none;padding-left:12px;border-left:2px solid rgba(251,191,36,0.15)}
+.depth-section.open{display:block}
+.array-field{margin-bottom:14px}
+.array-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:6px}
+.array-header span{font-size:0.75rem;color:rgba(255,255,255,0.4)}
+.btn-add{background:none;border:1px solid rgba(255,255,255,0.1);color:rgba(255,255,255,0.4);padding:4px 10px;border-radius:4px;cursor:pointer;font-size:0.75rem}
+.btn-add:hover{color:#fbbf24;border-color:#fbbf24}
+.array-item{display:flex;gap:8px;margin-bottom:6px;align-items:center}
+.array-item input{flex:1;padding:8px 10px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:4px;color:#e0e0e8;font-size:0.82rem}
+.pair-field{display:flex;gap:8px;margin-bottom:6px;align-items:center}
+.pair-field input:first-child{flex:0.35}
+.pair-field input:last-child{flex:0.65}
+.btn-remove{background:rgba(239,68,68,0.1);border:1px solid rgba(239,68,68,0.15);color:#ef4444;padding:4px 8px;border-radius:4px;cursor:pointer;font-size:0.7rem;white-space:nowrap}
+.action-bar{display:flex;gap:12px;margin-top:24px;flex-wrap:wrap}
+.btn-primary{flex:1;padding:12px 24px;background:linear-gradient(135deg,#fbbf24,#d97706);border:none;border-radius:8px;color:#0a0a12;font-weight:600;font-size:0.9rem;cursor:pointer;min-width:140px}
+.btn-primary:hover{opacity:0.9}
+.btn-secondary{padding:12px 24px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:8px;color:rgba(255,255,255,0.6);font-size:0.85rem;cursor:pointer;min-width:140px}
+.btn-secondary:hover{color:#fff;border-color:rgba(255,255,255,0.2)}
+.preview{display:none;margin-top:24px;background:rgba(0,0,0,0.3);border:1px solid rgba(255,255,255,0.06);border-radius:8px;padding:16px}
+.preview.open{display:block}
+.preview h3{font-size:0.75rem;color:rgba(255,255,255,0.3);text-transform:uppercase;letter-spacing:0.15em;margin-bottom:10px}
+.preview pre{font-family:'SF Mono','Fira Code',monospace;font-size:0.78rem;color:rgba(255,255,255,0.5);line-height:1.6;overflow-x:auto;white-space:pre-wrap;word-break:break-all}
+.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);padding:10px 20px;border-radius:8px;font-size:0.85rem;z-index:100;transition:opacity 0.3s;opacity:0;pointer-events:none}
+.toast.show{opacity:1}
+.toast.success{background:#065f46;color:#a7f3d0}
+.toast.error{background:#7f1d1d;color:#fca5a5}
+@media(max-width:500px){.main{padding:16px}.action-bar{flex-direction:column}}
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>─ 建议新节点</h1>
+  <p>填写信息 → 生成 JSON → 提交给知宇</p>
+</div>
+<div class="main">
+
+<div class="form-group">
+  <label>概念名称 Concept Name *</label>
+  <input type="text" id="name" placeholder="例如：反馈循环 / Feedback Loops">
+</div>
+
+<div class="form-group">
+  <label>学科分类 Category *</label>
+  <select id="category">
+    <option value="">— 请选择 —</option>
+    <option value="physics">物理 Physics</option>
+    <option value="biology">生物 Biology</option>
+    <option value="cs">计算机 CS</option>
+    <option value="math">数学 Math</option>
+    <option value="systems">系统 Systems</option>
+    <option value="art">艺术 Art</option>
+    <option value="philosophy">哲学 Philosophy</option>
+    <option value="society">社会 Society</option>
+  </select>
+</div>
+
+<div class="form-group">
+  <label>Node ID *</label>
+  <input type="text" id="nodeId" placeholder="英文标识符，例如 feedback">
+  <div style="font-size:0.75rem;color:rgba(255,255,255,0.3);margin-top:4px">用于节点间关联，仅英文字符</div>
+</div>
+
+<div class="form-group">
+  <label>一句话描述 Description *</label>
+  <textarea id="desc" rows="2" placeholder="用一句话说明这个概念的本质…"></textarea>
+</div>
+
+<div class="section-toggle" onclick="toggleDepth()">
+  <span style="font-size:1.1rem">+</span> 添加深度内容 Add Depth (推荐)
+</div>
+
+<div class="depth-section" id="depthSec">
+  <div class="form-group">
+    <label>核心理念 Core Idea</label>
+    <textarea id="coreIdea" rows="3" placeholder="深入阐述这个概念的本质"></textarea>
+  </div>
+  <div class="form-group">
+    <label>为什么重要 Why It Matters</label>
+    <textarea id="whyMatters" rows="2" placeholder="这个概念对人有什么实际意义？"></textarea>
+  </div>
+
+  <div class="array-field">
+    <div class="array-header"><span>行动原则 Action Principles</span><button class="btn-add" onclick="addField('principlesList','.principle-tpl')">+ 添加</button></div>
+    <div id="principlesList"></div>
+  </div>
+  <div class="array-field">
+    <div class="array-header"><span>关键人物 Key Thinkers</span><button class="btn-add" onclick="addPair('thinkersList','.thinker-tpl')">+ 添加</button></div>
+    <div id="thinkersList"></div>
+  </div>
+  <div class="array-field">
+    <div class="array-header"><span>时间线 Timeline</span><button class="btn-add" onclick="addPair('timelineList','.timeline-tpl')">+ 添加</button></div>
+    <div id="timelineList"></div>
+  </div>
+  <div class="array-field">
+    <div class="array-header"><span>跨域洞察 Cross-domain</span><button class="btn-add" onclick="addPair('crossList','.cross-tpl')">+ 添加</button></div>
+    <div id="crossList"></div>
+  </div>
+  <div class="array-field">
+    <div class="array-header"><span>开放前沿 Open Frontiers</span><button class="btn-add" onclick="addField('frontiersList','.frontier-tpl')">+ 添加</button></div>
+    <div id="frontiersList"></div>
+  </div>
+</div>
+
+<div class="action-bar">
+  <button class="btn-primary" onclick="submitNode()">提交节点 Submit</button>
+  <button class="btn-secondary" onclick="previewJSON()">预览 JSON</button>
+</div>
+
+<div class="preview" id="preview">
+  <h3>JSON Preview</h3>
+  <pre id="jsonOut"></pre>
+  <div style="margin-top:10px"><button class="btn-secondary" onclick="copyJSON()" style="padding:8px 16px">复制 JSON</button></div>
+</div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<template id="principleTpl"><div class="array-item"><input type="text" placeholder="行动原则…" class="pi"><button class="btn-remove" onclick="this.parentElement.remove()">✕ 删除</button></div></template>
+<template id="thinkerTpl"><div class="pair-field"><input type="text" placeholder="姓名" class="tn"><input type="text" placeholder="贡献描述" class="td"><button class="btn-remove" onclick="this.parentElement.remove()">✕</button></div></template>
+<template id="timelineTpl"><div class="pair-field"><input type="text" placeholder="年份" class="ty"><input type="text" placeholder="事件" class="te"><button class="btn-remove" onclick="this.parentElement.remove()">✕</button></div></template>
+<template id="crossTpl"><div class="pair-field"><input type="text" placeholder="领域" class="cf"><input type="text" placeholder="洞察" class="ci"><button class="btn-remove" onclick="this.parentElement.remove()">✕</button></div></template>
+<template id="frontierTpl"><div class="array-item"><input type="text" placeholder="开放问题…" class="fi"><button class="btn-remove" onclick="this.parentElement.remove()">✕ 删除</button></div></template>
+
+<script>
+function gid(id){return document.getElementById(id)}
+function toggleDepth(){gid('depthSec').classList.toggle('open')}
+function addField(listId,tplId){var t=gid(tplId).content.cloneNode(true);gid(listId).appendChild(t)}
+function addPair(listId,tplId){var t=gid(tplId).content.cloneNode(true);gid(listId).appendChild(t)}
+function vals(sel){var r=[];document.querySelectorAll(sel).forEach(function(x){var v=x.value.trim();if(v)r.push(v)});return r}
+function pairs(sel1,sel2){var r=[];var a=document.querySelectorAll(sel1);var b=document.querySelectorAll(sel2);a.forEach(function(x,i){var n=x.value.trim();var d=b[i].value.trim();if(n)r.push([n,d])});return r}
+var COLORS={physics:'#ff6b6b',biology:'#51cf66',cs:'#339af0',math:'#e8590c',systems:'#fcc419',art:'#f06595',philosophy:'#ae3ec9',society:'#845ef7'}
+
+function getNode(){
+  var name=gid('name').value.trim();var cat=gid('category').value;var id=gid('nodeId').value.trim()||name.toLowerCase().replace(/[^a-z0-9]+/g,'_').replace(/_+$/,'');var desc=gid('desc').value.trim();
+  if(!name||!cat||!id||!desc){showToast('请填写所有必填字段','error');return null}
+  var n={id:id,label:name,category:cat,description:desc,color:COLORS[cat]||'#888888'};
+  var ci=gid('coreIdea').value.trim();var wm=gid('whyMatters').value.trim();
+  if(ci||wm){n.depth={};if(ci)n.depth.core_idea=ci;if(wm)n.depth.why_it_matters=wm;
+    var ap=vals('.pi');if(ap.length)n.depth.action_principles=ap;
+    var kt=pairs('.tn','.td');if(kt.length)n.depth.key_thinkers=kt;
+    var tl=pairs('.ty','.te');if(tl.length)n.depth.timeline=tl;
+    var cd=pairs('.cf','.ci');if(cd.length)n.depth.cross_domain=cd;
+    var of=vals('.fi');if(of.length)n.depth.open_frontiers=of}
+  return n;
+}
+
+function previewJSON(){var n=getNode();if(!n)return;gid('jsonOut').textContent=JSON.stringify(n,null,2);gid('preview').classList.add('open')}
+function submitNode(){var n=getNode();if(!n)return;var json=JSON.stringify(n,null,2);var title='New Node: '+n.label;var body='## Suggested Node\n\n```json\n'+json+'\n```';var url='https://github.com/zhujb60-eng/xihe-kosmos/issues/new?title='+encodeURIComponent(title)+'&body='+encodeURIComponent(body);window.open(url,'_blank');showToast('已打开 GitHub—点击 Submit new issue 完成提交','success')}
+function copyJSON(){var n=getNode();if(!n)return;navigator.clipboard.writeText(JSON.stringify(n,null,2)).then(function(){showToast('已复制 JSON','success'})['catch'](function(){showToast('复制失败','error')})}
+function showToast(m,t){var o=gid('toast');o.textContent=m;o.className='toast '+t+' show';setTimeout(function(){o.classList.remove('show')},3000)}
+</script>
+</body>
+</html>
